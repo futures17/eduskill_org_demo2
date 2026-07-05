@@ -1,0 +1,386 @@
+/* about.css - Styling for the About Us Page */
+
+/* Hero Section */
+.about-hero {
+    background: linear-gradient(135deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.35) 100%), url('../../assets/images/hero-section/about-group.webp') no-repeat center center/cover;
+    color: var(--color-white);
+    padding: var(--spacing-xxl) 0;
+    text-align: center;
+    border-bottom: 3px solid var(--color-accent-main);
+}
+
+.about-badge {
+    display: inline-block;
+    background-color: rgba(123, 97, 255, 0.15);
+    border: 1px solid var(--color-accent-main);
+    color: var(--color-sky-blue);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: var(--radius-pill);
+    margin-bottom: var(--spacing-md);
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+.about-hero h1 {
+    font-size: 2.8rem;
+    line-height: 1.25;
+    max-width: 800px;
+    margin: 0 auto var(--spacing-md);
+    color: var(--color-white);
+}
+
+.about-hero p {
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Mission & Vision Intro Section */
+.about-intro {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--color-white);
+}
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+
+.intro-text h2 {
+    font-size: 2.2rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.highlight-p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--color-accent-main);
+    border-left: 3px solid var(--color-accent-main);
+    padding-left: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.intro-text p {
+    color: var(--color-dark-text);
+    line-height: 1.7;
+    margin-bottom: var(--spacing-md);
+}
+
+.intro-image {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-medium);
+    height: 380px;
+}
+
+.intro-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.intro-image:hover img {
+    transform: scale(1.03);
+}
+
+/* Core Values Section */
+.about-values {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--color-bg-very-light-grey);
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+}
+
+.value-card {
+    background-color: var(--color-white);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    box-shadow: 0 10px 30px rgba(27, 11, 69, 0.04);
+    border: 1px solid rgba(27, 11, 69, 0.04);
+    transition: all var(--transition-fast);
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--color-accent-main);
+}
+
+.value-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(123, 97, 255, 0.08);
+    color: var(--color-accent-main);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.value-icon svg {
+    width: 24px;
+    height: 24px;
+    stroke: currentColor;
+}
+
+.value-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.value-card p {
+    font-size: 0.88rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+}
+
+/* Leadership Team Section */
+.about-team {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--color-white);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-lg);
+}
+
+.team-card {
+    background-color: var(--color-bg-very-light-grey);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+    border: 1px solid rgba(27, 11, 69, 0.03);
+    transition: all var(--transition-fast);
+    display: flex;
+    flex-direction: column;
+}
+
+.team-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-medium);
+    border-color: var(--color-accent-main);
+}
+
+.team-photo {
+    height: 250px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: #e5e7eb;
+}
+
+.team-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.team-info {
+    padding: var(--spacing-md);
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.team-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 2px;
+}
+
+.team-info span {
+    font-size: 0.78rem;
+    color: var(--color-accent-main);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: block;
+    margin-bottom: var(--spacing-sm);
+}
+
+.team-info p {
+    font-size: 0.82rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+    margin-top: auto;
+}
+
+/* Journey Timeline */
+.about-journey {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--color-bg-very-light-grey);
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--spacing-lg) 0;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: rgba(123, 97, 255, 0.2);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    right: -8px;
+    background-color: var(--color-white);
+    border: 3px solid var(--color-accent-main);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+    transition: all var(--transition-fast);
+}
+
+.timeline-item.left {
+    left: 0;
+}
+
+.timeline-item.right {
+    left: 50%;
+}
+
+.timeline-item.right::after {
+    left: -8px;
+}
+
+.timeline-date {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-accent-main);
+    margin-bottom: var(--spacing-xs);
+}
+
+.timeline-content {
+    padding: var(--spacing-md);
+    background-color: var(--color-white);
+    position: relative;
+    border-radius: var(--radius-sm);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    border: 1px solid rgba(0,0,0,0.03);
+}
+
+.timeline-content h3 {
+    font-size: 1.15rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.timeline-content p {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+}
+
+.timeline-item:hover::after {
+    background-color: var(--color-accent-main);
+    transform: scale(1.2);
+}
+
+/* About CTA */
+.about-cta {
+    padding: var(--spacing-xxl) 0;
+    background: linear-gradient(135deg, var(--color-accent-main) 0%, #5b3fd4 100%);
+    color: var(--color-white);
+    text-align: center;
+}
+
+.about-cta h2 {
+    color: var(--color-white);
+    font-size: 2.2rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.about-cta p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto var(--spacing-lg);
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+    .intro-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .intro-image {
+        height: 300px;
+    }
+    
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .about-hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .about-hero p {
+        font-size: 1rem;
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+        max-width: 380px;
+        margin: 0 auto;
+    }
+    
+    .timeline::after {
+        left: 31px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    
+    .timeline-item.right {
+        left: 0%;
+    }
+    
+    .timeline-item.left::after, .timeline-item.right::after {
+        left: 23px;
+    }
+}

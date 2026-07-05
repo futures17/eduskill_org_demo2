@@ -1,0 +1,1569 @@
+/* career.css - Premium Career Page Styling */
+
+/* ==========================================
+   1. Career Hero Section
+   ========================================== */
+.career-hero {
+    background: linear-gradient(135deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.35) 100%), url('../../assets/images/hero-section/careers.webp') no-repeat center center/cover;
+    color: var(--color-white);
+    padding: var(--spacing-xxl) 0;
+    text-align: center;
+    border-bottom: 3px solid var(--color-accent-main);
+    position: relative;
+    overflow: hidden;
+}
+
+.career-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse 400px 300px at 20% 50%, rgba(123, 97, 255, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.career-hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.career-badge {
+    display: inline-block;
+    background-color: rgba(123, 97, 255, 0.15);
+    border: 1px solid var(--color-accent-main);
+    color: var(--color-sky-blue);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 25px;
+    margin-bottom: var(--spacing-md);
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    animation: fadeInUp 0.6s ease;
+}
+
+.career-hero h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    max-width: 900px;
+    margin: 0 auto var(--spacing-md);
+    color: var(--color-white);
+    animation: fadeInUp 0.8s ease 0.1s both;
+}
+
+.career-hero p {
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 700px;
+    margin: 0 auto var(--spacing-xl);
+    line-height: 1.6;
+    animation: fadeInUp 0.8s ease 0.2s both;
+}
+
+.career-hero-cta {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeInUp 0.8s ease 0.3s both;
+}
+
+/* ==========================================
+   2. Section Header Styling
+   ========================================== */
+.section-header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-primary-blue);
+}
+
+.section-header p {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.section-subheading {
+    display: block;
+    color: var(--color-accent-main);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1.2px;
+    margin-bottom: var(--spacing-sm);
+}
+
+/* ==========================================
+   3. Life At EduSkill Collage Section
+   ========================================== */
+.life-at-eduskill {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--color-white);
+}
+
+.life-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+
+.life-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-primary-blue);
+    line-height: 1.2;
+}
+
+.life-content p {
+    color: var(--color-text-muted);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: var(--spacing-lg);
+}
+
+.life-pillars {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.pillar-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-dark-text);
+}
+
+.pillar-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: var(--color-accent-main);
+    border-radius: 50%;
+    margin-top: 6px;
+    flex-shrink: 0;
+}
+
+.life-collage-container {
+    position: relative;
+    height: 440px;
+    width: 100%;
+}
+
+.collage-item {
+    position: absolute;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+    border: 4px solid var(--color-white);
+    overflow: hidden;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast), z-index 0s;
+}
+
+.collage-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Custom Overlapping Positions for Collage */
+.col-img-1 {
+    top: 10px;
+    left: 10px;
+    width: 50%;
+    height: 200px;
+    z-index: 2;
+}
+
+.col-img-2 {
+    top: 40px;
+    right: 10px;
+    width: 42%;
+    height: 160px;
+    z-index: 1;
+}
+
+.col-img-3 {
+    bottom: 20px;
+    left: 30px;
+    width: 44%;
+    height: 170px;
+    z-index: 3;
+}
+
+.col-img-4 {
+    bottom: 40px;
+    right: 30px;
+    width: 46%;
+    height: 190px;
+    z-index: 2;
+}
+
+.collage-item:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: var(--shadow-hover);
+    z-index: 10;
+}
+
+/* ==========================================
+   4. Why Join Section
+   ========================================== */
+.why-join-section {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--color-bg-very-light-grey);
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+}
+
+.why-card {
+    background-color: var(--color-white);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-light-blue);
+    text-align: center;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    animation: fadeInUp 0.6s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--color-accent-main);
+}
+
+.why-icon {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto var(--spacing-md);
+    background-color: var(--color-bg-light-violet);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-accent-hover);
+    font-size: 2rem;
+    transition: all var(--transition-fast);
+}
+
+.why-card:hover .why-icon {
+    background: linear-gradient(135deg, var(--color-accent-main) 0%, var(--color-accent-hover) 100%);
+    color: var(--color-white);
+    transform: scale(1.1);
+}
+
+.why-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-primary-blue);
+}
+
+.why-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-text-muted);
+}
+
+/* ==========================================
+   5. Benefits & Perks Section
+   ========================================== */
+.benefits-section {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--color-white);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+}
+
+.benefit-card {
+    background-color: var(--color-bg-very-light-grey);
+    border: 1px solid var(--color-light-blue);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    text-align: center;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-accent-main);
+    box-shadow: var(--shadow-soft);
+    background-color: var(--color-white);
+}
+
+.benefit-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(123, 97, 255, 0.1);
+    color: var(--color-accent-main);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--spacing-md);
+    transition: transform var(--transition-fast);
+}
+
+.benefit-icon-wrapper svg {
+    width: 28px;
+    height: 28px;
+}
+
+.benefit-card:hover .benefit-icon-wrapper {
+    transform: scale(1.1);
+    background-color: var(--color-accent-main);
+    color: var(--color-white);
+}
+
+.benefit-card h3 {
+    font-size: 1.25rem;
+    color: var(--color-primary-blue);
+    margin-bottom: var(--spacing-sm);
+}
+
+.benefit-card p {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+}
+
+/* ==========================================
+   6. Career Journey Timeline Section
+   ========================================== */
+.career-journey {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--color-bg-very-light-grey);
+}
+
+.journey-timeline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
+}
+
+.journey-step {
+    background-color: var(--color-white);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-light-blue);
+    box-shadow: var(--shadow-soft);
+    text-align: center;
+    transition: all var(--transition-fast);
+    animation: fadeInUp 0.6s ease;
+}
+
+.journey-step:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.journey-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto var(--spacing-md);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.5rem;
+    transition: all var(--transition-fast);
+}
+
+.journey-icon.entry {
+    background-color: rgba(123, 97, 255, 0.1);
+    color: var(--color-accent-main);
+}
+
+.journey-icon.mid {
+    background-color: rgba(124, 206, 250, 0.1);
+    color: var(--color-sky-blue);
+}
+
+.journey-icon.senior {
+    background-color: rgba(46, 182, 125, 0.1);
+    color: var(--color-success-green);
+}
+
+.journey-step:hover .journey-icon {
+    transform: scale(1.1);
+}
+
+.journey-step h3 {
+    font-size: 1.4rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-primary-blue);
+}
+
+.journey-step p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--color-text-muted);
+}
+
+/* ==========================================
+   7. Learning Culture Section
+   ========================================== */
+.learning-culture {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--color-white);
+}
+
+.learning-culture-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+
+.learning-culture-img img {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    display: block;
+}
+
+.learning-culture-content h2 {
+    font-size: 2.5rem;
+    color: var(--color-primary-blue);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.2;
+}
+
+.learning-culture-content p {
+    font-size: 1.05rem;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    margin-bottom: var(--spacing-lg);
+}
+
+.culture-points {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.culture-point {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+}
+
+.culture-point-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background-color: rgba(46, 182, 125, 0.1);
+    color: var(--color-success-green);
+    border-radius: 50%;
+    font-weight: bold;
+    flex-shrink: 0;
+    margin-top: 4px;
+}
+
+.culture-point h4 {
+    font-size: 1.2rem;
+    color: var(--color-primary-blue);
+    margin-bottom: 2px;
+}
+
+.culture-point p {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* ==========================================
+   8. Departments Section
+   ========================================== */
+.departments-section {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--color-bg-very-light-grey);
+}
+
+.departments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+}
+
+.dept-card {
+    background-color: var(--color-white);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.dept-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Department Border Accents */
+.dept-card.border-student {
+    border-top: 4px solid var(--color-sky-blue);
+}
+
+.dept-card.border-college {
+    border-top: 4px solid var(--color-secondary-blue);
+}
+
+.dept-card.border-recruiter {
+    border-top: 4px solid var(--color-accent-main);
+}
+
+.dept-icon {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(123, 97, 255, 0.08);
+    border: 2px solid var(--color-accent-main);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-accent-main);
+    margin-bottom: var(--spacing-md);
+    transition: all var(--transition-fast);
+}
+
+.dept-icon svg {
+    width: 24px;
+    height: 24px;
+    stroke: currentColor;
+    display: block;
+}
+
+.dept-card:hover .dept-icon {
+    background-color: var(--color-accent-main);
+    color: var(--color-white);
+    transform: scale(1.05);
+}
+
+.dept-card h3 {
+    font-size: 1.3rem;
+    color: var(--color-primary-blue);
+    margin-bottom: var(--spacing-sm);
+}
+
+.dept-card p {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+    flex-grow: 1;
+}
+
+.dept-link {
+    font-size: 0.95rem;
+    color: var(--color-accent-main);
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform var(--transition-fast);
+}
+
+.dept-card:hover .dept-link {
+    transform: translateX(4px);
+    color: var(--color-accent-hover);
+}
+
+/* ==========================================
+   9. Internship Programs Section
+   ========================================== */
+.internships-section {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--color-white);
+}
+
+.internships-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+}
+
+.internship-card {
+    background-color: var(--color-white);
+    border: 2px solid var(--color-light-blue);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    position: relative;
+    transition: all var(--transition-fast);
+    animation: fadeInUp 0.6s ease;
+}
+
+.internship-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-accent-main);
+    box-shadow: var(--shadow-hover);
+}
+
+.internship-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background-color: var(--color-accent-main);
+    color: var(--color-white);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.internship-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+    color: var(--color-primary-blue);
+}
+
+.internship-card p {
+    font-size: 0.95rem;
+    margin-bottom: var(--spacing-md);
+    line-height: 1.7;
+    color: var(--color-text-muted);
+}
+
+.internship-benefits {
+    list-style: none;
+    margin: var(--spacing-md) 0;
+    text-align: left;
+}
+
+.internship-benefits li {
+    padding: 6px 0;
+    padding-left: 24px;
+    position: relative;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+}
+
+.internship-benefits li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-success-green);
+    font-weight: bold;
+}
+
+.btn-sm {
+    padding: 8px 16px !important;
+    font-size: 0.9rem !important;
+}
+
+/* ==========================================
+   10. Industry Programs Section
+   ========================================== */
+.industry-programs {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--color-bg-very-light-grey);
+}
+
+.programs-showcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+}
+
+.program-item {
+    background-color: var(--color-white);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--color-accent-main);
+    box-shadow: var(--shadow-soft);
+    transition: all var(--transition-fast);
+    animation: fadeInUp 0.6s ease;
+}
+
+.program-item:hover {
+    transform: translateX(5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.program-header {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.program-icon {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(123, 97, 255, 0.08);
+    border: 2px solid var(--color-accent-main);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-accent-main);
+    flex-shrink: 0;
+    transition: all var(--transition-fast);
+}
+
+.program-icon svg {
+    width: 24px;
+    height: 24px;
+    stroke: currentColor;
+    display: block;
+}
+
+.program-item:hover .program-icon {
+    background-color: var(--color-accent-main);
+    color: var(--color-white);
+    transform: scale(1.05);
+}
+
+.program-item h3 {
+    font-size: 1.2rem;
+    color: var(--color-primary-blue);
+    flex: 1;
+    margin-top: 4px;
+}
+
+.program-item p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--color-text-muted);
+}
+
+/* ==========================================
+   11. Growth Roadmap Section
+   ========================================== */
+.growth-roadmap {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--color-white);
+}
+
+.roadmap-flow {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-xl);
+    position: relative;
+}
+
+.roadmap-step {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.roadmap-connector {
+    position: absolute;
+    top: 25px;
+    left: 40px;
+    right: -40px;
+    height: 2px;
+    border-top: 2px dashed var(--color-light-blue);
+    z-index: 1;
+    width: calc(100% + var(--spacing-md));
+}
+
+.roadmap-marker {
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-primary-blue);
+    color: var(--color-white);
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid var(--color-white);
+    box-shadow: 0 0 0 2px var(--color-primary-blue);
+    position: relative;
+    z-index: 2;
+    margin-bottom: var(--spacing-md);
+    transition: transform var(--transition-fast), background-color var(--transition-fast);
+}
+
+.roadmap-step:hover .roadmap-marker {
+    transform: scale(1.1);
+    background-color: var(--color-accent-main);
+    box-shadow: 0 0 0 2px var(--color-accent-main);
+}
+
+.roadmap-box {
+    background-color: var(--color-bg-very-light-grey);
+    border: 1px solid var(--color-light-blue);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+    width: 100%;
+    transition: transform var(--transition-fast), background-color var(--transition-fast);
+}
+
+.roadmap-step:hover .roadmap-box {
+    transform: translateY(-5px);
+    background-color: var(--color-white);
+    border-color: var(--color-accent-main);
+    box-shadow: var(--shadow-soft);
+}
+
+.roadmap-box h3 {
+    font-size: 1.15rem;
+    color: var(--color-primary-blue);
+    margin-bottom: var(--spacing-xs);
+}
+
+.roadmap-box p {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+}
+
+/* ==========================================
+   12. Employee Stories Section
+   ========================================== */
+.employee-stories {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--color-bg-very-light-grey);
+}
+
+.stories-carousel-container {
+    position: relative;
+    max-width: 900px;
+    margin: var(--spacing-xl) auto 0;
+    background-color: var(--color-white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    padding: var(--spacing-lg) var(--spacing-xl);
+    overflow: hidden;
+}
+
+.stories-track {
+    position: relative;
+}
+
+.story-slide {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.story-slide.active {
+    display: block;
+    opacity: 1;
+}
+
+.story-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--spacing-lg);
+    align-items: center;
+}
+
+.story-member-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--color-bg-light-violet);
+    box-shadow: var(--shadow-soft);
+    margin: 0 auto;
+}
+
+.story-member-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.story-text {
+    text-align: left;
+    position: relative;
+}
+
+.quote-mark {
+    font-size: 5rem;
+    color: var(--color-light-blue);
+    position: absolute;
+    top: -45px;
+    left: -15px;
+    font-family: serif;
+    line-height: 1;
+    user-select: none;
+    pointer-events: none;
+}
+
+.story-quote {
+    font-size: 1.15rem;
+    color: var(--color-dark-text);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+    position: relative;
+    z-index: 1;
+}
+
+.story-name {
+    font-size: 1.25rem;
+    color: var(--color-primary-blue);
+    margin: 0 0 2px 0;
+}
+
+.story-role {
+    font-size: 0.9rem;
+    color: var(--color-accent-main);
+    font-weight: 500;
+}
+
+/* Controls */
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--color-bg-very-light-grey);
+    border: 1px solid var(--color-light-blue);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    color: var(--color-primary-blue);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-fast);
+    z-index: 10;
+}
+
+.carousel-control:hover {
+    background-color: var(--color-accent-main);
+    color: var(--color-white);
+    border-color: var(--color-accent-main);
+    transform: translateY(-50%) scale(1.05);
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+.carousel-dots-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: var(--spacing-lg);
+}
+
+.story-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--color-light-blue);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.story-dot.active {
+    background-color: var(--color-accent-main);
+    width: 24px;
+    border-radius: 6px;
+}
+
+/* ==========================================
+   13. Positions Section & Filtering
+   ========================================== */
+.positions-section {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--color-white);
+}
+
+.filter-controls {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-xl);
+}
+
+.filter-btn {
+    background-color: var(--color-bg-very-light-grey);
+    border: 1px solid var(--color-light-blue);
+    color: var(--color-primary-blue);
+    font-family: var(--font-family-main);
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 10px 22px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: var(--color-accent-main);
+    border-color: var(--color-accent-main);
+    color: var(--color-white);
+    box-shadow: var(--shadow-soft);
+}
+
+.positions-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.position-card {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-light-blue);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-soft);
+    transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.position-card.hidden-card {
+    display: none !important;
+}
+
+.position-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-accent-main);
+    box-shadow: var(--shadow-hover);
+}
+
+.position-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--spacing-md);
+    border-bottom: 1px solid var(--color-light-blue);
+    padding-bottom: var(--spacing-md);
+}
+
+.position-header h3 {
+    font-size: 1.3rem;
+    color: var(--color-primary-blue);
+    margin: 0;
+    flex: 1;
+}
+
+.position-type {
+    background-color: var(--color-success-green);
+    color: var(--color-white);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    margin-left: var(--spacing-sm);
+}
+
+.position-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.position-location,
+.position-level {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+}
+
+.position-location svg,
+.position-level svg {
+    width: 16px;
+    height: 16px;
+    stroke: var(--color-accent-main);
+}
+
+.position-card p {
+    font-size: 0.95rem;
+    margin-bottom: var(--spacing-md);
+    line-height: 1.6;
+    color: var(--color-text-muted);
+    flex-grow: 1;
+}
+
+.position-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: var(--spacing-md);
+}
+
+.tag {
+    background-color: rgba(123, 97, 255, 0.08);
+    color: var(--color-accent-main);
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    border-radius: 12px;
+    border: 1px solid rgba(123, 97, 255, 0.2);
+    font-weight: 500;
+}
+
+/* ==========================================
+   14. Application Process Section
+   ========================================== */
+.application-process {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--color-bg-very-light-grey);
+}
+
+.process-steps {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
+    position: relative;
+}
+
+.process-step {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-lg);
+    background-color: var(--color-white);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--color-accent-main);
+    position: relative;
+    z-index: 1;
+}
+
+.step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--color-accent-main) 0%, var(--color-accent-hover) 100%);
+    color: var(--color-white);
+    border-radius: 50%;
+    font-size: 1.4rem;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.process-step h3 {
+    font-size: 1.3rem;
+    margin-bottom: 4px;
+    color: var(--color-primary-blue);
+}
+
+.process-step p {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+}
+
+.step-duration {
+    display: inline-block;
+    background-color: rgba(123, 97, 255, 0.1);
+    color: var(--color-accent-main);
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 12px;
+}
+
+.process-connector {
+    display: none;
+}
+
+/* Connection line on larger screens */
+@media (min-width: 992px) {
+    .process-steps {
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        align-items: start;
+        gap: 0;
+    }
+
+    .process-step {
+        grid-column: span 1;
+        flex-direction: column;
+        gap: var(--spacing-md);
+        margin-right: 0;
+        position: relative;
+        padding-bottom: var(--spacing-xl);
+    }
+
+    /* Steps are column 1, 3, 5, 7, 9. Connectors are 2, 4, 6, 8 */
+    .process-steps > .process-step:nth-child(1) { grid-column: 1 / span 1; }
+    .process-steps > .process-connector:nth-child(2) { grid-column: 2 / span 1; }
+    .process-steps > .process-step:nth-child(3) { grid-column: 3 / span 1; }
+    .process-steps > .process-connector:nth-child(4) { grid-column: 4 / span 1; }
+    .process-steps > .process-step:nth-child(5) { grid-column: 5 / span 1; }
+    .process-steps > .process-connector:nth-child(6) { grid-column: 6 / span 1; }
+    .process-steps > .process-step:nth-child(7) { grid-column: 7 / span 1; }
+    .process-steps > .process-connector:nth-child(8) { grid-column: 8 / span 1; }
+    .process-steps > .process-step:nth-child(9) { grid-column: 9 / span 1; }
+
+    .process-connector {
+        display: block;
+        position: relative;
+        height: 4px;
+        background-color: var(--color-light-blue);
+        margin-top: 25px;
+    }
+
+    .process-connector::after {
+        content: '';
+        position: absolute;
+        right: -6px;
+        top: -4px;
+        width: 12px;
+        height: 12px;
+        background-color: var(--color-accent-main);
+        border-radius: 50%;
+        border: 2px solid var(--color-white);
+    }
+}
+
+/* ==========================================
+   15. FAQ Section (Accordion Drawers)
+   ========================================== */
+.career-faq {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--color-white);
+}
+
+.faq-accordion-container {
+    max-width: 800px;
+    margin: var(--spacing-xl) auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.faq-item {
+    background-color: var(--color-bg-very-light-grey);
+    border: 1px solid var(--color-light-blue);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: all var(--transition-fast);
+}
+
+.faq-item:hover {
+    border-color: var(--color-accent-main);
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-soft);
+}
+
+.faq-trigger {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-md);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-family: var(--font-family-main);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-primary-blue);
+    transition: color var(--transition-fast);
+}
+
+.faq-chevron {
+    width: 20px;
+    height: 20px;
+    stroke: var(--color-accent-main);
+    transition: transform var(--transition-fast);
+    flex-shrink: 0;
+    margin-left: var(--spacing-sm);
+}
+
+.faq-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease;
+    padding: 0 var(--spacing-md);
+}
+
+.faq-content p {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Accordion Active States */
+.faq-item.active {
+    background-color: var(--color-white);
+    border-color: var(--color-accent-main);
+    box-shadow: var(--shadow-soft);
+}
+
+.faq-item.active .faq-content {
+    max-height: 300px; /* high enough limit */
+    padding: 0 var(--spacing-md) var(--spacing-md) var(--spacing-md);
+}
+
+.faq-item.active .faq-chevron {
+    transform: rotate(180deg);
+}
+
+.faq-item.active .faq-trigger {
+    color: var(--color-accent-hover);
+}
+
+/* ==========================================
+   16. Contact HR Section
+   ========================================== */
+.contact-hr-section {
+    padding: var(--spacing-xl) 0 var(--spacing-xxl);
+    background-color: var(--color-white);
+}
+
+.contact-hr-card {
+    background: linear-gradient(135deg, #F5F3FF 0%, #EEF2FF 100%);
+    border: 2px solid rgba(123, 97, 255, 0.2);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+    box-shadow: var(--shadow-soft);
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-hr-card::after {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(123, 97, 255, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.contact-hr-icon {
+    width: 64px;
+    height: 64px;
+    background-color: var(--color-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-accent-main);
+    flex-shrink: 0;
+    box-shadow: var(--shadow-soft);
+}
+
+.contact-hr-icon svg {
+    width: 30px;
+    height: 30px;
+}
+
+.contact-hr-text {
+    flex-grow: 1;
+}
+
+.contact-hr-text h2 {
+    font-size: 1.8rem;
+    color: var(--color-primary-blue);
+    margin-bottom: 4px;
+}
+
+.contact-hr-text p {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+    margin-bottom: var(--spacing-sm);
+}
+
+.hr-coordinates {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    font-size: 0.95rem;
+    color: var(--color-dark-text);
+}
+
+.hr-coordinates .separator {
+    color: var(--color-light-blue);
+}
+
+.contact-hr-action {
+    flex-shrink: 0;
+}
+
+/* ==========================================
+   17. Animations keyframes
+   ========================================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================
+   18. Button Overrides
+   ========================================== */
+.btn-secondary {
+    background-color: var(--color-white);
+    color: var(--color-primary-blue);
+    border: 2px solid var(--color-white);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-bg-light-violet);
+    color: var(--color-accent-main);
+}
+
+/* ==========================================
+   19. Responsive Media Queries
+   ========================================== */
+@media (max-width: 991px) {
+    .life-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+
+    .life-collage-container {
+        height: 380px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .learning-culture-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    .learning-culture-img {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .roadmap-flow {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    .roadmap-connector {
+        display: none;
+    }
+
+    .roadmap-marker {
+        margin-bottom: var(--spacing-xs);
+    }
+
+    .contact-hr-card {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--spacing-md);
+    }
+
+    .hr-coordinates {
+        justify-content: center;
+    }
+
+    .contact-hr-action {
+        width: 100%;
+    }
+
+    .contact-hr-action .btn {
+        width: 100%;
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .career-hero h1 {
+        font-size: 2rem;
+    }
+
+    .career-hero p {
+        font-size: 1rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .internship-badge {
+        position: static;
+        display: inline-block;
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .internship-card h3 {
+        margin-top: 0;
+    }
+
+    .position-header {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+
+    .position-type {
+        margin-left: 0;
+    }
+
+    .story-layout {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+        text-align: center;
+    }
+
+    .story-text {
+        text-align: center;
+    }
+
+    .quote-mark {
+        display: none;
+    }
+
+    .stories-carousel-container {
+        padding: var(--spacing-md);
+    }
+}

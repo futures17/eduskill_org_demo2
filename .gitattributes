@@ -1,0 +1,11 @@
+# Auto detect text files and perform LF normalization on commit
+* text=auto
+
+# Explicitly declare text files to be normalized
+*.html text
+*.css text
+*.js text
+*.json text
+*.md text
+*.toml text
+*.bat text eol=crlf

@@ -1,0 +1,233 @@
+/* our-journey.css - Premium timeline layout with animated connectors */
+
+/* ==========================================
+   1. Hero Style
+   ========================================== */
+.journey-hero {
+    background: linear-gradient(135deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.35) 100%), url('../../assets/images/hero-section/our-journey.webp') no-repeat center center/cover;
+    color: var(--color-white);
+    padding: var(--spacing-xxl) 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.journey-hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 10% 80%, rgba(123, 97, 255, 0.15) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.journey-hero h1 {
+    color: var(--color-white);
+    font-size: 3rem;
+    max-width: 800px;
+    margin: 0 auto var(--spacing-sm);
+    line-height: 1.2;
+}
+
+.journey-hero p {
+    color: var(--color-sky-blue);
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto;
+    font-weight: 300;
+}
+
+.journey-badge {
+    background-color: rgba(124, 206, 250, 0.15);
+    color: var(--color-sky-blue);
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: var(--spacing-md);
+    border: 1px solid rgba(124, 206, 250, 0.3);
+}
+
+/* ==========================================
+   2. Timeline Grid & Structure
+   ========================================== */
+.timeline-section {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--color-white);
+}
+
+.timeline-wrapper {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: var(--spacing-lg) 0;
+}
+
+/* Timeline center vertical line backgrounds */
+.timeline-line-bg {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background-color: var(--color-light-blue);
+    transform: translateX(-50%);
+    z-index: 1;
+    border-radius: 4px;
+}
+
+.timeline-line-fill {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 4px;
+    height: 0%; /* Populated dynamically by JS scroll */
+    background: linear-gradient(to bottom, var(--color-accent-main), var(--color-sky-blue));
+    transform: translateX(-50%);
+    z-index: 2;
+    border-radius: 4px;
+    transition: height 0.1s linear;
+}
+
+/* Timeline nodes */
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 0 var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+    z-index: 3;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-item.left {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item.right {
+    left: 50%;
+    text-align: left;
+}
+
+/* Dots on timeline center line */
+.timeline-dot {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--color-white);
+    border: 4px solid var(--color-light-blue);
+    top: 15px;
+    z-index: 4;
+    transition: all var(--transition-fast);
+}
+
+.timeline-item.left .timeline-dot {
+    right: -10px;
+}
+
+.timeline-item.right .timeline-dot {
+    left: -10px;
+}
+
+/* Activated center dot styles */
+.timeline-item.active .timeline-dot {
+    border-color: var(--color-accent-main);
+    background-color: var(--color-accent-main);
+    box-shadow: 0 0 10px rgba(123, 97, 255, 0.6);
+    transform: scale(1.2);
+}
+
+/* Timeline dates */
+.timeline-date {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-accent-main);
+    margin-bottom: var(--spacing-xs);
+    display: inline-block;
+}
+
+/* Timeline card boxes */
+.timeline-content {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-light-blue);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-md);
+    box-shadow: var(--shadow-soft);
+    display: inline-block;
+    width: 100%;
+    max-width: 420px;
+    transition: all var(--transition-fast);
+}
+
+.timeline-content h3 {
+    font-size: 1.35rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.timeline-content p {
+    font-size: 0.95rem;
+    margin-bottom: 0;
+    color: var(--color-text-muted);
+}
+
+/* Hover effects */
+.timeline-item:hover .timeline-content {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--color-accent-main);
+}
+
+/* ==========================================
+   3. Entrance Animations
+   ========================================== */
+.animate-timeline {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-timeline.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==========================================
+   4. Mobile Adaptation (Responsive Layouts)
+   ========================================== */
+@media (max-width: 768px) {
+    .journey-hero h1 {
+        font-size: 2.25rem;
+    }
+    
+    .timeline-line-bg, .timeline-line-fill {
+        left: 20px;
+        transform: none;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        left: 0 !important;
+        padding-left: var(--spacing-lg);
+        padding-right: 0;
+        text-align: left !important;
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .timeline-dot {
+        left: 10px !important;
+        right: auto !important;
+    }
+    
+    .timeline-content {
+        max-width: 100%;
+    }
+}

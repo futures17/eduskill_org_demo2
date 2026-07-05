@@ -1,0 +1,327 @@
+/* vision-mission-values.css - Storytelling, timeline, and value cards */
+
+/* ==========================================
+   1. Hero Header Section
+   ========================================== */
+.vmv-hero {
+    background: linear-gradient(135deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.35) 100%), url('../../assets/images/hero-section/vision-mission-values.webp') no-repeat center center/cover;
+    color: var(--color-white);
+    padding: var(--spacing-xxl) 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.vmv-hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 80% 20%, rgba(123, 97, 255, 0.15) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.vmv-hero h1 {
+    color: var(--color-white);
+    font-size: 3rem;
+    max-width: 800px;
+    margin: 0 auto var(--spacing-sm);
+    line-height: 1.2;
+}
+
+.vmv-hero p {
+    color: var(--color-sky-blue);
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto;
+    font-weight: 300;
+}
+
+.vmv-badge {
+    background-color: rgba(124, 206, 250, 0.15);
+    color: var(--color-sky-blue);
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: var(--spacing-md);
+    border: 1px solid rgba(124, 206, 250, 0.3);
+}
+
+/* ==========================================
+   2. Storytelling Grid (Vision & Mission)
+   ========================================== */
+.story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: var(--spacing-xl);
+    align-items: start;
+}
+
+.story-card {
+    background: var(--color-white);
+    border: 1px solid var(--color-light-blue);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-soft);
+    transition: all var(--transition-fast);
+}
+
+.story-card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-4px);
+}
+
+.card-icon-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+    border-bottom: 2px solid var(--color-light-blue);
+    padding-bottom: var(--spacing-sm);
+}
+
+.card-icon-header svg {
+    width: 32px;
+    height: 32px;
+    color: var(--color-accent-main);
+}
+
+.card-icon-header h3 {
+    margin-bottom: 0;
+    font-size: 1.75rem;
+}
+
+.vision-card blockquote {
+    font-style: italic;
+    font-size: 1.25rem;
+    color: var(--color-secondary-blue);
+    border-left: 4px solid var(--color-accent-main);
+    padding-left: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.5;
+}
+
+.card-extra {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+}
+
+.mission-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.mission-list li {
+    position: relative;
+    padding-left: var(--spacing-md);
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+}
+
+.mission-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    color: var(--color-success-green);
+    font-weight: 700;
+}
+
+.mission-list li strong {
+    color: var(--color-primary-blue);
+}
+
+/* ==========================================
+   3. Strategic Pillars (Vertical Timeline)
+   ========================================== */
+.vmv-pillars-section {
+    background-color: var(--color-bg-very-light-grey);
+}
+
+.timeline-pillars {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--spacing-lg) 0;
+}
+
+.timeline-pillars::before {
+    content: '';
+    position: absolute;
+    left: 50px;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background-color: var(--color-light-blue);
+    border-radius: 4px;
+}
+
+.pillar-node {
+    position: relative;
+    display: flex;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+}
+
+.pillar-node:last-child {
+    margin-bottom: 0;
+}
+
+.pillar-badge-num {
+    width: 100px;
+    height: 40px;
+    background-color: var(--color-primary-blue);
+    color: var(--color-white);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+    z-index: 1;
+    border: 3px solid var(--color-white);
+    box-shadow: var(--shadow-soft);
+}
+
+.pillar-node:hover .pillar-badge-num {
+    background-color: var(--color-accent-main);
+}
+
+.pillar-content-box {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-light-blue);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+    box-shadow: var(--shadow-soft);
+    flex-grow: 1;
+    transition: all var(--transition-fast);
+}
+
+.pillar-node:hover .pillar-content-box {
+    transform: translateX(6px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--color-accent-main);
+}
+
+.pillar-content-box h4 {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.pillar-content-box p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+}
+
+/* ==========================================
+   4. Core Values Grid
+   ========================================== */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+.value-card {
+    background: var(--color-white);
+    border: 1px solid var(--color-light-blue);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+    box-shadow: var(--shadow-soft);
+    transition: all var(--transition-fast);
+}
+
+.value-card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-4px);
+    border-color: var(--color-accent-main);
+}
+
+.value-icon {
+    width: 60px;
+    height: 60px;
+    background-color: var(--color-bg-light-violet);
+    color: var(--color-accent-main);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--spacing-sm);
+    transition: all var(--transition-fast);
+}
+
+.value-card:hover .value-icon {
+    background-color: var(--color-accent-main);
+    color: var(--color-white);
+}
+
+.value-icon svg {
+    width: 28px;
+    height: 28px;
+}
+
+.value-card h4 {
+    font-size: 1.35rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.value-card p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+}
+
+/* ==========================================
+   5. Animations (Scroll Reveal Settings)
+   ========================================== */
+.animate-box {
+    opacity: 0;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-box.fade-in-up {
+    transform: translateY(30px);
+}
+
+.animate-box.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==========================================
+   6. Responsive Adaptability
+   ========================================== */
+@media (max-width: 991px) {
+    .story-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+}
+
+@media (max-width: 768px) {
+    .vmv-hero h1 {
+        font-size: 2.25rem;
+    }
+    .timeline-pillars::before {
+        left: 20px;
+    }
+    .pillar-node {
+        gap: var(--spacing-sm);
+    }
+    .pillar-badge-num {
+        width: 60px;
+        font-size: 0.75rem;
+    }
+    .values-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+}

@@ -1,0 +1,15 @@
+/* responsive.css - Site-wide Global Responsive Utilities */
+
+/* Container padding adjustments on mobile */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+}
+
+/* Site-wide base typography scale adjustments on mobile */
+@media (max-width: 768px) {
+    html {
+        font-size: 15px; /* scale down rem base */
+    }
+}

@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduSkill Group - AI-Powered EdTech Ecosystem</title>
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/logo/fevicon.webp" type="image/webp" sizes="any">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- CSS Modules -->
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/navbar.css">
+    <link rel="stylesheet" href="style/hero.css">
+    <link rel="stylesheet" href="style/home.css">
+    <link rel="stylesheet" href="style/contact.css">
+    <link rel="stylesheet" href="style/ai-lab.css">
+    <link rel="stylesheet" href="style/flipcard.css">
+    <link rel="stylesheet" href="style/statistics.css">
+    <link rel="stylesheet" href="style/services/services.css">
+    <link rel="stylesheet" href="style/footer/footer.css">
+    <link rel="stylesheet" href="style/responsive.css">
+    <!-- Three.js for premium hero silk effect -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+</head>
+
+<body>
+    <!-- 1. NAVIGATION -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/images/logo/eduskill_logo_nav.webp" alt="EduSkill Logo" onerror="this.src='assets/images/logo/eduskill_logo_main.webp';">
+            </a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">☰</button>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="pages/about.html" class="nav-link">About Us</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle">Platforms <svg class="dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a>
+                    <div class="dropdown-panel">
+                        <div class="dropdown-grid">
+                            <a href="pages/services/platforms.html#retailcareer" class="dropdown-item">
+                                <div class="dropdown-icon orange">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                                </div>
+                                <div class="dropdown-info">
+                                    <span class="dropdown-title">RetailCareer</span>
+                                    <span class="dropdown-desc">Retail jobs & certifications</span>
+                                </div>
+                            </a>
+                            <a href="pages/services/platforms.html#eduskillx" class="dropdown-item">
+                                <div class="dropdown-icon blue">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/></svg>
+                                </div>
+                                <div class="dropdown-info">
+                                    <span class="dropdown-title">EduSkillX</span>
+                                    <span class="dropdown-desc">AI testing, proctoring & LMS</span>
+                                </div>
+                            </a>
+                            <a href="pages/services/platforms.html#nearbyhiring" class="dropdown-item">
+                                <div class="dropdown-icon green">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 21.7C10 20 2 12.3 2 10a10 10 0 1 1 20 0c0 2.3-8 10-10 11.7z"/></svg>
+                                </div>
+                                <div class="dropdown-info">
+                                    <span class="dropdown-title">NearbyHiring</span>
+                                    <span class="dropdown-desc">Hyper-local job discovery</span>
+                                </div>
+                            </a>
+                            <a href="pages/services/platforms.html#evoxel" class="dropdown-item">
+                                <div class="dropdown-icon purple">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                                </div>
+                                <div class="dropdown-info">
+                                    <span class="dropdown-title">EvoXel</span>
+                                    <span class="dropdown-desc">Career counseling & mentoring</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                                <li class="nav-item dropdown">
+                    <a href="pages/services/services.html" class="nav-link dropdown-toggle">Services <svg class="dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a>
+                    <div class="dropdown-panel dropdown-large">
+                        <div class="dropdown-grid grid-2-col">
+                            <a href="pages/services/ai-proctoring.html" class="dropdown-item">
+                                <div class="dropdown-icon blue">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                </div>
+                                <div class="dropdown-info">
+                                    <span class="dropdown-title">AI Proctoring System</span>
+                                    <span class="dropdown-desc">Secure eye-tracking & voice anti-cheat</span>
+                                </div>
+                            </a>
+                            <a href="pages/services/virtual-labs.html" class="dropdown-item">
+                                <div class="dropdown-icon purple">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+                                </div>
+                                <div class="dropdown-info">
+                                    <span class="dropdown-title">Virtual Science Labs</span>
+                                    <span class="dropdown-desc">Cloud-based chemistry & coding labs</span>
+                                </div>
+                            </a>
+                            <a href="pages/services/ai-assessment.html" class="dropdown-item">
+                                <div class="dropdown-icon orange">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                                </div>
+                                <div class="dropdown-info">
+                                    <span class="dropdown-title">AI Resume Architect</span>
+                                    <span class="dropdown-desc">Create ATS-optimized job resumes</span>
+                                </div>
+                            </a>
+                            <a href="pages/services/career-counselling.html" class="dropdown-item">
+                                <div class="dropdown-icon green">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                                </div>
+                                <div class="dropdown-info">
+                                    <span class="dropdown-title">AI Interview Coach</span>
+                                    <span class="dropdown-desc">Behavioral and technical mock feedback</span>
+                                </div>
+                            </a>
+                            <a href="pages/services/placement-services.html" class="dropdown-item">
+                                <div class="dropdown-icon blue">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/></svg>
+                                </div>
+                                <div class="dropdown-info">
+                                    <span class="dropdown-title">Placement CRM Hub</span>
+                                    <span class="dropdown-desc">College drive analytics & offer tracker</span>
+                                </div>
+                            </a>
+                            <a href="pages/services/platforms.html" class="dropdown-item">
+                                <div class="dropdown-icon orange">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                                </div>
+                                <div class="dropdown-info">
+                                    <span class="dropdown-title">Recruiter Portal</span>
+                                    <span class="dropdown-desc">Filter vetted student portfolios</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="pages/contact.html" class="nav-link">Contact Us</a></li>
+            </ul>
+            <div class="nav-cta">
+                <a href="pages/contact.html" class="btn btn-primary">Connect With Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. HERO SECTION -->
+    <header class="hero-section" id="hero-section">
+        <!-- Three.js Silk Shader Background Canvas -->
+        <div id="hero-canvas-container" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:0.2;"></div>
+
+        <div class="container hero-content">
+            <div class="hero-text">
+                <div class="hero-badge">AI-POWERED | FUTURE-READY | IMPACT-DRIVEN</div>
+                <h1>Developing Sustainable Educational Tools for Tomorrow</h1>
+                <p>EduSkill Group is an integrated ecosystem of AI-driven EdTech platforms connecting learning, testing, training and recruitment for a better future.</p>
+                <div class="hero-cta">
+                    <a href="pages/services/platforms.html" class="btn btn-primary">Explore Projects &rarr;</a>
+                    <a href="pages/about.html" class="btn btn-outline-light">Learn More</a>
+                </div>
+            </div>
+            <!-- Circular Composition (Mockup-inspired) -->
+            <div class="hero-graphic-container">
+                <div class="circle-portal">
+                    <div class="circle-portal-inner">
+                        <!-- Fade slideshow inside the circle -->
+                        <div class="portal-slides">
+                            <div class="portal-slide active">
+                                <img src="assets/images/1.webp" alt="Empowering Student Careers">
+                            </div>
+                            <div class="portal-slide">
+                                <img src="assets/images/2.webp" alt="Campus to Corporate Placement">
+                            </div>
+                            <div class="portal-slide">
+                                <img src="assets/images/3.webp" alt="Hyper-local Job Opportunities">
+                            </div>
+                            <div class="portal-slide">
+                                <img src="assets/images/4.webp" alt="AI-driven Learning Pathways">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Pulsing Dashed Orbit Ring -->
+                    <div class="portal-border-orbit"></div>
+
+                    <!-- Dashed connecting lines SVG (Scaled dynamically) -->
+                    <svg class="connecting-lines" viewBox="0 0 500 500" fill="none">
+                        <!-- Top-Left connection -->
+                        <path d="M 80 110 L 250 250" stroke="#7CCEFA" stroke-width="2" stroke-dasharray="4 6" />
+                        <!-- Top-Right connection -->
+                        <path d="M 420 110 L 250 250" stroke="#7CCEFA" stroke-width="2" stroke-dasharray="4 6" />
+                        <!-- Bottom-Left connection -->
+                        <path d="M 80 390 L 250 250" stroke="#7CCEFA" stroke-width="2" stroke-dasharray="4 6" />
+                        <!-- Bottom-Right connection -->
+                        <path d="M 420 390 L 250 250" stroke="#7CCEFA" stroke-width="2" stroke-dasharray="4 6" />
+                    </svg>
+
+                    <!-- Floating Platform Cards -->
+                    <div class="float-card card-tl">
+                        <img src="assets/images/tiny logos for hoem page/Schedule.webp" alt="RetailCareer Icon" class="float-card-icon orange">
+                        <div class="float-card-text">
+                            <strong>RetailCareer</strong>
+                            <p>Retail Employability & Placement</p>
+                        </div>
+                    </div>
+                    <div class="float-card card-tr">
+                        <img src="assets/images/tiny logos for hoem page/Assess.webp" alt="EduSkillX Icon" class="float-card-icon blue">
+                        <div class="float-card-text">
+                            <strong>EduSkillX</strong>
+                            <p>AI Assessments, Proctoring & LMS</p>
+                        </div>
+                    </div>
+                    <div class="float-card card-bl">
+                        <img src="assets/images/tiny logos for hoem page/Practice.webp" alt="NearbyHiring Icon" class="float-card-icon green">
+                        <div class="float-card-text">
+                            <strong>NearbyHiring</strong>
+                            <p>Hyperlocal Jobs & Campus Hiring</p>
+                        </div>
+                    </div>
+                    <div class="float-card card-br">
+                        <img src="assets/images/tiny logos for hoem page/Learn.webp" alt="EvoXel Icon" class="float-card-icon purple">
+                        <div class="float-card-text">
+                            <strong>EvoXel</strong>
+                            <p>Career Counseling & Mentoring</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3. HERO STATS RIBBON -->
+    <div class="stats-ribbon">
+        <div class="container stats-ribbon-container">
+            <div class="ribbon-item">
+                <div class="ribbon-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                </div>
+                <div class="ribbon-text">
+                    <span class="ribbon-number" data-target="150">0</span>
+                    <span class="ribbon-label">Active Job Listings</span>
+                </div>
+            </div>
+            <div class="ribbon-item">
+                <div class="ribbon-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <div class="ribbon-text">
+                    <span class="ribbon-number" data-target="12">0</span>
+                    <span class="ribbon-label">Lakh+ Total Users</span>
+                </div>
+            </div>
+            <div class="ribbon-item">
+                <div class="ribbon-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><line x1="9" y1="22" x2="9" y2="16"/><line x1="15" y1="22" x2="15" y2="16"/><line x1="9" y1="16" x2="15" y2="16"/></svg>
+                </div>
+                <div class="ribbon-text">
+                    <span class="ribbon-number" data-target="2500">0</span>
+                    <span class="ribbon-label">Partner Companies</span>
+                </div>
+            </div>
+            <div class="ribbon-item">
+                <div class="ribbon-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/></svg>
+                </div>
+                <div class="ribbon-text">
+                    <span class="ribbon-number" data-target="500">0</span>
+                    <span class="ribbon-label">Colleges & Universities</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. WHAT WE DO SECTION -->
+    <section class="what-we-do-section" id="what-we-do">
+        <div class="container">
+            <div class="section-header">
+                <h2>What We Do</h2>
+                <p>Closed-loop education to employment gateway providing custom skilling, assessment and job mapping tracks.</p>
+            </div>
+            
+            <div class="what-we-do-grid">
+                <div class="what-card learn">
+                    <div class="what-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 19.5A2.5 2.5 0 0 0 6.5 22H20M4 19.5V3.5A2.5 2.5 0 0 1 6.5 1V17H4z"/></svg>
+                    </div>
+                    <h3>Learn</h3>
+                    <p>AI-powered learning paths and skill-based education customized for every student.</p>
+                </div>
+                <div class="what-card assess">
+                    <div class="what-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                    </div>
+                    <h3>Assess</h3>
+                    <p>Smart assessments, automated proctoring and detailed skill analytics engines.</p>
+                </div>
+                <div class="what-card train">
+                    <div class="what-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <h3>Train</h3>
+                    <p>Industry-aligned training programs, virtual labs, and career upskilling paths.</p>
+                </div>
+                <div class="what-card hire">
+                    <div class="what-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                    </div>
+                    <h3>Hire</h3>
+                    <p>Connecting vetted student talent with top local and national recruiter partnerships.</p>
+                </div>
+            </div>
+
+            <!-- What We Do Statistics -->
+            <div class="what-stats-row">
+                <div class="what-stat-item">
+                    <span class="what-stat-number" data-target="500000">0</span>
+                    <span class="what-stat-label">Active Students</span>
+                </div>
+                <div class="what-stat-item">
+                    <span class="what-stat-number" data-target="150">0</span>
+                    <span class="what-stat-label">Global Universities</span>
+                </div>
+                <div class="what-stat-item">
+                    <span class="what-stat-number" data-target="2500">0</span>
+                    <span class="what-stat-label">Successful Hires</span>
+                </div>
+                <div class="what-stat-item">
+                    <span class="what-stat-number" data-target="20">0</span>
+                    <span class="what-stat-label">National Awards</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carousel Section -->
+    <section class="carousel-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Our Partners</span>
+                <h2 class="section-title">Trusted by Leading Brands</h2>
+                <p class="section-desc">We collaborate with industry leaders worldwide to deliver excellence in education and technology.</p>
+            </div>
+            <div class="carousel-row left">
+                <div class="carousel-track track-ltr">
+                    <div class="carousel-track-inner">
+                        <div class="carousel-item"><img src="assets/images/carousel/carousel-1.webp" alt=""><span class="carousel-label">AI Learning</span></div>
+                        <div class="carousel-item"><img src="assets/images/carousel/carousel-2.webp" alt=""><span class="carousel-label">Skill Assessment</span></div>
+                        <div class="carousel-item"><img src="assets/images/carousel/carousel-3.webp" alt=""><span class="carousel-label">Cloud Platform</span></div>
+                        <div class="carousel-item"><img src="assets/images/carousel/carousel-4.webp" alt=""><span class="carousel-label">Data Analytics</span></div>
+                        <div class="carousel-item"><img src="assets/images/carousel/carousel-5.webp" alt=""><span class="carousel-label">EdTech Suite</span></div>
+                        <div class="carousel-item"><img src="assets/images/carousel/carousel-6.webp" alt=""><span class="carousel-label">Virtual Labs</span></div>
+                        <div class="carousel-item"><img src="assets/images/carousel/carousel-7.webp" alt=""><span class="carousel-label">Proctoring</span></div>
+                        <div class="carousel-item"><img src="assets/images/carousel/carousel-8.webp" alt=""><span class="carousel-label">Collaboration</span></div>
+                        <div class="carousel-item"><img src="assets/images/carousel/carousel-9.webp" alt=""><span class="carousel-label">Certification</span></div>
+                    </div>
+                    <div class="carousel-track-inner" aria-hidden="true">
+                        <div class="carousel-item"><img src="assets/images/carousel/carousel-1.webp" alt=""><span class="carousel-label">AI Learning</span></div>
+                        <div class="carousel-item"><img src="assets/images/carousel/carousel-2.webp" alt=""><span class="carousel-label">Skill Assessment</span></div>
+                        <div class="carousel-item"><img src="assets/images/carousel/carousel-3.webp" alt=""><span class="carousel-label">Cloud Platform</span></div>
+                        <div class="carousel-item"><img src="assets/images/carousel/carousel-4.webp" alt=""><span class="carousel-label">Data Analytics</span></div>
+                        <div class="carousel-item"><img src="assets/images/carousel/carousel-5.webp" alt=""><span class="carousel-label">EdTech Suite</span></div>
+                        <div class="carousel-item"><img src="assets/images/carousel/carousel-6.webp" alt=""><span class="carousel-label">Virtual Labs</span></div>
+                        <div class="carousel-item"><img src="assets/images/carousel/carousel-7.webp" alt=""><span class="carousel-label">Proctoring</span></div>
+                        <div class="carousel-item"><img src="assets/images/carousel/carousel-8.webp" alt=""><span class="carousel-label">Collaboration</span></div>
+                        <div class="carousel-item"><img src="assets/images/carousel/carousel-9.webp" alt=""><span class="carousel-label">Certification</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-row right">
+                <div class="carousel-track track-rtl">
+                    <div class="carousel-track-inner">
+                        <div class="carousel-item"><img src="assets/images/carousel/carousel-10.webp" alt=""><span class="carousel-label">Global Network</span></div>
+                        <div class="carousel-item"><img src="assets/images/carousel/carousel-11.webp" alt=""><span class="carousel-label">Smart Class</span></div>
+                        <div class="carousel-item"><img src="assets/images/carousel/carousel-12.webp" alt=""><span class="carousel-label">AI Mentor</span></div>
+                        <div class="carousel-item"><img src="assets/images/carousel/carousel-13.webp" alt=""><span class="carousel-label">Live Tracking</span></div>
+                        <div class="carousel-item"><img src="assets/images/carousel/carousel-14.webp" alt=""><span class="carousel-label">E-Library</span></div>
+                        <div class="carousel-item"><img src="assets/images/carousel/carousel-15.webp" alt=""><span class="carousel-label">Gamification</span></div>
+                        <div class="carousel-item"><img src="assets/images/carousel/carousel-16.webp" alt=""><span class="carousel-label">Placement Hub</span></div>
+                        <div class="carousel-item"><img src="assets/images/carousel/carousel-17.webp" alt=""><span class="carousel-label">Analytics</span></div>
+                        <div class="carousel-item"><img src="assets/images/carousel/carousel-18.webp" alt=""><span class="carousel-label">Community</span></div>
+                    </div>
+                    <div class="carousel-track-inner" aria-hidden="true">
+                        <div class="carousel-item"><img src="assets/images/carousel/carousel-10.webp" alt=""><span class="carousel-label">Global Network</span></div>
+                        <div class="carousel-item"><img src="assets/images/carousel/carousel-11.webp" alt=""><span class="carousel-label">Smart Class</span></div>
+                        <div class="carousel-item"><img src="assets/images/carousel/carousel-12.webp" alt=""><span class="carousel-label">AI Mentor</span></div>
+                        <div class="carousel-item"><img src="assets/images/carousel/carousel-13.webp" alt=""><span class="carousel-label">Live Tracking</span></div>
+                        <div class="carousel-item"><img src="assets/images/carousel/carousel-14.webp" alt=""><span class="carousel-label">E-Library</span></div>
+                        <div class="carousel-item"><img src="assets/images/carousel/carousel-15.webp" alt=""><span class="carousel-label">Gamification</span></div>
+                        <div class="carousel-item"><img src="assets/images/carousel/carousel-16.webp" alt=""><span class="carousel-label">Placement Hub</span></div>
+                        <div class="carousel-item"><img src="assets/images/carousel/carousel-17.webp" alt=""><span class="carousel-label">Analytics</span></div>
+                        <div class="carousel-item"><img src="assets/images/carousel/carousel-18.webp" alt=""><span class="carousel-label">Community</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. THREE-COLUMN MID LAYOUT SECTION -->
+    <section class="mid-layout-section">
+        <div class="container">
+            <div class="mid-grid">
+                <!-- Column 1: Our Services -->
+                <div class="mid-services-col" style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+                    <h3 style="font-size: 2.2rem; color: var(--color-deep-blue); margin-bottom: 24px; font-weight: 700;">Our Services</h3>
+                    <div class="mid-services-list">
+                        <!-- Box 1 -->
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="mid-services-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+                                    <span>AI Assessments</span>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p>Advanced AI-driven cheating prevention and secure testing environments.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Box 2 -->
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="mid-services-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+                                    <span>Placement Solutions</span>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p>Connecting top talent with leading corporate employers globally.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Box 3 -->
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="mid-services-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+                                    <span>Upskilling Courses</span>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p>Industry-recognized courses for tomorrow's skill requirements.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Box 4 -->
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="mid-services-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+                                    <span>Data Analytics</span>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p>Data-driven insights to track learning progress and institutional growth.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Box 5 -->
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="mid-services-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 19.5A2.5 2.5 0 0 0 6.5 22H20M4 19.5V3.5A2.5 2.5 0 0 1 6.5 1V17H4z"/></svg></div>
+                                    <span>Career Mentorship</span>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p>Expert guidance mapping out successful career trajectories.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Box 6 -->
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="mid-services-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg></div>
+                                    <span>Information Tech</span>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p>Modern IT infrastructure and support for educational institutions.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Box 7 -->
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="mid-services-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
+                                    <span>Cloud Solutions</span>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p>Scalable cloud computing resources for seamless education delivery.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Box 8 -->
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="mid-services-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+                                    <span>Financial Planning</span>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p>Strategic financial modeling for schools and corporate training programs.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Box 9 -->
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="mid-services-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
+                                    <span>Global Certification</span>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p>Internationally recognized credentialing and verified badges.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="pages/services/services.html" class="btn btn-primary" style="margin-top: 16px;">View All Services</a>
+                </div>
+                
+                <!-- Column 2: About EduSkill Group -->
+                <div class="mid-about-col" style="padding: 60px 0;">
+                    <div class="about-feature-card" style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center; background: var(--color-white); padding: 50px; border-radius: 20px; box-shadow: var(--shadow-soft);">
+                        <div class="about-text-box" style="flex: 1; min-width: 300px; display: flex; flex-direction: column; justify-content: center;">
+                            <span style="color: var(--color-deep-blue); font-size: 0.8rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 12px;">About Us</span>
+                            <h3 style="font-size: 2.2rem; color: var(--color-deep-blue); margin-bottom: 20px; font-weight: 700; line-height: 1.2;">About EduSkill Group</h3>
+                            <p style="font-size: 1.05rem; color: var(--color-text-muted); line-height: 1.7; margin-bottom: 30px;">We are building the most trusted AI-powered education-to-employment ecosystem in India. Our four platforms work together to empower students, colleges, corporates and entrepreneurs for a better tomorrow.</p>
+                            <a href="pages/about.html" class="btn btn-primary" style="align-self: flex-start; padding: 12px 24px; border-radius: 8px;">Read More About Us &rarr;</a>
+                        </div>
+                        <div class="about-img-box" style="flex: 1; min-width: 300px; border-radius: 12px; overflow: hidden; height: 350px;">
+                            <img src="assets/images/about/about-8.webp" alt="EduSkill Corporate Building" onerror="this.src='assets/images/about/1.webp';" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 3: Why Choose Us -->
+                <div class="mid-why-col" style="text-align: center; padding-top: 20px;">
+                    <h3 style="font-size: 2.2rem; color: var(--color-deep-blue); margin-bottom: 32px; font-weight: 700;">Why Choose Us?</h3>
+                    <div class="why-grid-4x1" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px;">
+                        <div class="why-feature-card" style="padding: 32px 20px; border-radius: 16px; border-bottom: 4px solid var(--color-professional-purple);">
+                            <div class="why-card-icon" style="width: 60px; height: 60px; margin: 0 auto 20px; background: rgba(91, 59, 140, 0.08); color: var(--color-professional-purple); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 28px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            </div>
+                            <strong style="font-size: 1.1rem; display: block; margin-bottom: 10px; color: var(--color-deep-blue);">AI-Powered Solutions</strong>
+                            <p style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.5;">Cheating prevention and customized study engines.</p>
+                        </div>
+                        <div class="why-feature-card" style="padding: 32px 20px; border-radius: 16px; border-bottom: 4px solid var(--color-professional-purple);">
+                            <div class="why-card-icon" style="width: 60px; height: 60px; margin: 0 auto 20px; background: rgba(91, 59, 140, 0.08); color: var(--color-professional-purple); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 28px;"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                            </div>
+                            <strong style="font-size: 1.1rem; display: block; margin-bottom: 10px; color: var(--color-deep-blue);">End-to-End Ecosystem</strong>
+                            <p style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.5;">Connecting courses, testing, labs and placements.</p>
+                        </div>
+                        <div class="why-feature-card" style="padding: 32px 20px; border-radius: 16px; border-bottom: 4px solid var(--color-professional-purple);">
+                            <div class="why-card-icon" style="width: 60px; height: 60px; margin: 0 auto 20px; background: rgba(91, 59, 140, 0.08); color: var(--color-professional-purple); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 28px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            </div>
+                            <strong style="font-size: 1.1rem; display: block; margin-bottom: 10px; color: var(--color-deep-blue);">Trusted by Institutions</strong>
+                            <p style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.5;">Used by 500+ top colleges nationwide.</p>
+                        </div>
+                        <div class="why-feature-card" style="padding: 32px 20px; border-radius: 16px; border-bottom: 4px solid var(--color-professional-purple);">
+                            <div class="why-card-icon" style="width: 60px; height: 60px; margin: 0 auto 20px; background: rgba(91, 59, 140, 0.08); color: var(--color-professional-purple); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 28px;"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                            </div>
+                            <strong style="font-size: 1.1rem; display: block; margin-bottom: 10px; color: var(--color-deep-blue);">Impact-Driven Outcomes</strong>
+                            <p style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.5;">Direct dashboard links for student hiring managers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. OUR PLATFORMS SECTION -->
+    <section class="platforms-section" id="platforms">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Platforms & Strategic Future Plans</h2>
+                <p>Four specialized EdTech platforms operating in synchronization to deliver skills and recruitment pathways.</p>
+            </div>
+            
+            <div class="platforms-grid">
+                <!-- RetailCareer -->
+                <div class="platform-card">
+                    <div class="platform-card-img">
+                        <img src="assets/images/service3.webp" alt="RetailCareer Platform" onerror="this.src='assets/images/1.webp';">
+                    </div>
+                    <div class="platform-card-body">
+                        <span class="platform-badge">www.retailcareer.org</span>
+                        <h3>RetailCareer</h3>
+                        <p>Specialized recruitment and employability portal mapping students into retail sector corporations.</p>
+                        <ul class="platform-features">
+                            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Retail sector courses</li>
+                            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Large corporate hiring</li>
+                            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Store simulation checks</li>
+                        </ul>
+                        <a href="pages/services/platforms.html#retailcareer" class="platform-link">Learn More &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- EduSkillX -->
+                <div class="platform-card">
+                    <div class="platform-card-img">
+                        <img src="assets/images/skilling.webp" alt="EduSkillX Platform" onerror="this.src='assets/images/1.webp';">
+                    </div>
+                    <div class="platform-card-body">
+                        <span class="platform-badge">www.eduskillx.com</span>
+                        <h3>EduSkillX</h3>
+                        <p>AI test engines, online science and programming laboratories, and custom student progress monitoring LMS.</p>
+                        <ul class="platform-features">
+                            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Voice and face proctoring</li>
+                            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Interactive cloud labs</li>
+                            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Advanced tutor portals</li>
+                        </ul>
+                        <a href="pages/services/platforms.html#eduskillx" class="platform-link">Learn More &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- NearbyHiring -->
+                <div class="platform-card">
+                    <div class="platform-card-img">
+                        <img src="assets/images/service2.webp" alt="NearbyHiring Platform" onerror="this.src='assets/images/1.webp';">
+                    </div>
+                    <div class="platform-card-body">
+                        <span class="platform-badge">www.nearbyhiring.com</span>
+                        <h3>NearbyHiring</h3>
+                        <p>A location-based job discovery engine linking graduates directly with hiring companies in their locality.</p>
+                        <ul class="platform-features">
+                            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Distance radius filtering</li>
+                            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Direct HR contact board</li>
+                            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Verified badge scoring</li>
+                        </ul>
+                        <a href="pages/services/platforms.html#nearbyhiring" class="platform-link">Learn More &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- EvoXel -->
+                <div class="platform-card">
+                    <div class="platform-card-img">
+                        <img src="assets/images/services1.webp" alt="EvoXel Platform" onerror="this.src='assets/images/1.webp';">
+                    </div>
+                    <div class="platform-card-body">
+                        <span class="platform-badge">www.evoxel.org</span>
+                        <h3>EvoXel</h3>
+                        <p>Providing expert webinars, career mentoring sessions, and certification prep tracks to boost hiring rates.</p>
+                        <ul class="platform-features">
+                            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 1-on-1 industry mentors</li>
+                            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Micro-credential courses</li>
+                            <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Interview prep webinars</li>
+                        </ul>
+                        <a href="pages/services/platforms.html#evoxel" class="platform-link">Learn More &rarr;</a>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="pages/services/platforms.html" class="platforms-more-link">View All Platforms & Future Plans &rarr;</a>
+        </div>
+    </section>
+
+    <!-- 7. OUR VISION SECTION (Full Width, Bigger) -->
+    <section class="vision-section">
+        <div class="container">
+            <div class="vision-card">
+                <div class="vision-content">
+                    <span class="vision-badge">Our Vision</span>
+                    <h2>Integrating Intelligent Tech Responsibly</h2>
+                    <p>We aim to democratize quality education and meaningful employment through responsible use of technology and data. Our commitment is to build an ecosystem where every learner has access to world-class resources and every employer can find the right talent.</p>
+                    <a href="pages/about.html" class="btn btn-primary">Know More &rarr;</a>
+                </div>
+                <div class="vision-image">
+                    <img src="assets/images/whyus.webp" alt="EduSkill Team Vision" onerror="this.src='assets/images/about/2.webp';">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. AI LAB SECTION with Dropdown -->
+    <section class="ailab-section">
+        <div class="container">
+            <div class="ailab-card">
+                <div class="ailab-header" id="ailab-toggle">
+                    <div>
+                        <h3>Artificial Intelligence Lab</h3>
+                        <p>Simulated visual model mapping standard machine learning pipelines designed to generate real-time student study recommendations.</p>
+                    </div>
+                    <span class="ailab-chevron" id="ailab-chevron">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </span>
+                </div>
+                <div class="ailab-body" id="ailab-body" style="display:none;">
+                    <div class="ai-lab-flowchart">
+                        <div class="flowchart-node">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                            Data Collection
+                        </div>
+                        <div class="flowchart-arrow"></div>
+                        <div class="flowchart-node">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                            Data Processing
+                        </div>
+                        <div class="flowchart-arrow"></div>
+                        <div class="flowchart-node">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>
+                            Model Training
+                        </div>
+                        <div class="flowchart-arrow"></div>
+                        <div class="flowchart-node">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                            Prediction Engine
+                        </div>
+                        <div class="flowchart-arrow"></div>
+                        <div class="flowchart-node output-box">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            Recommendations for Students
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. REAL PEOPLE, REAL SOLUTIONS with Auto Slider -->
+    <section class="reviews-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Real People, Real Solutions</h2>
+                <p class="section-desc">Hear from our partners and learners who have transformed their journey with EduSkill.</p>
+            </div>
+            <div class="reviews-carousel-row">
+                <div class="reviews-track track-ltr">
+                    <div class="reviews-track-inner">
+                        <div class="review-item"><img src="assets/images/reviews/review1.webp" alt=""><span class="review-label">Aman Sharma</span></div>
+                        <div class="review-item"><img src="assets/images/reviews/review2.webp" alt=""><span class="review-label">Rajesh Kumar</span></div>
+                        <div class="review-item"><img src="assets/images/reviews/review3.webp" alt=""><span class="review-label">Rahul Singh</span></div>
+                        <div class="review-item"><img src="assets/images/reviews/review4.webp" alt=""><span class="review-label">Amit Verma</span></div>
+                        <div class="review-item"><img src="assets/images/reviews/review5.webp" alt=""><span class="review-label">Suresh Patel</span></div>
+                        <div class="review-item"><img src="assets/images/reviews/review6.webp" alt=""><span class="review-label">Vikram Joshi</span></div>
+                        <div class="review-item"><img src="assets/images/reviews/review7.webp" alt=""><span class="review-label">Nitin Gupta</span></div>
+                        <div class="review-item"><img src="assets/images/reviews/review8.webp" alt=""><span class="review-label">Arjun Nair</span></div>
+                        <div class="review-item"><img src="assets/images/reviews/review9.webp" alt=""><span class="review-label">Karan Reddy</span></div>
+                    </div>
+                    <div class="reviews-track-inner" aria-hidden="true">
+                        <div class="review-item"><img src="assets/images/reviews/review1.webp" alt=""><span class="review-label">Aman Sharma</span></div>
+                        <div class="review-item"><img src="assets/images/reviews/review2.webp" alt=""><span class="review-label">Rajesh Kumar</span></div>
+                        <div class="review-item"><img src="assets/images/reviews/review3.webp" alt=""><span class="review-label">Rahul Singh</span></div>
+                        <div class="review-item"><img src="assets/images/reviews/review4.webp" alt=""><span class="review-label">Amit Verma</span></div>
+                        <div class="review-item"><img src="assets/images/reviews/review5.webp" alt=""><span class="review-label">Suresh Patel</span></div>
+                        <div class="review-item"><img src="assets/images/reviews/review6.webp" alt=""><span class="review-label">Vikram Joshi</span></div>
+                        <div class="review-item"><img src="assets/images/reviews/review7.webp" alt=""><span class="review-label">Nitin Gupta</span></div>
+                        <div class="review-item"><img src="assets/images/reviews/review8.webp" alt=""><span class="review-label">Arjun Nair</span></div>
+                        <div class="review-item"><img src="assets/images/reviews/review9.webp" alt=""><span class="review-label">Karan Reddy</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="reviews-carousel-row">
+                <div class="reviews-track track-rtl">
+                    <div class="reviews-track-inner">
+                        <div class="review-item"><img src="assets/images/reviews/review10.webp" alt=""><span class="review-label">Deepak Choudhary</span></div>
+                        <div class="review-item"><img src="assets/images/reviews/review10_girl.webp" alt=""><span class="review-label">Ritu Agarwal</span></div>
+                        <div class="review-item"><img src="assets/images/reviews/review11.webp" alt=""><span class="review-label">Sandeep Yadav</span></div>
+                        <div class="review-item"><img src="assets/images/reviews/review11_girl.webp" alt=""><span class="review-label">Pooja Mehta</span></div>
+                        <div class="review-item"><img src="assets/images/reviews/review12.webp" alt=""><span class="review-label">Manish Tiwari</span></div>
+                        <div class="review-item"><img src="assets/images/reviews/review12_girl.webp" alt=""><span class="review-label">Shweta Rao</span></div>
+                        <div class="review-item"><img src="assets/images/reviews/review13.webp" alt=""><span class="review-label">Gaurav Dixit</span></div>
+                        <div class="review-item"><img src="assets/images/reviews/review13_girl.webp" alt=""><span class="review-label">Ankita Bose</span></div>
+                        <div class="review-item"><img src="assets/images/reviews/review14.webp" alt=""><span class="review-label">Rohit Kapoor</span></div>
+                    </div>
+                    <div class="reviews-track-inner" aria-hidden="true">
+                        <div class="review-item"><img src="assets/images/reviews/review10.webp" alt=""><span class="review-label">Deepak Choudhary</span></div>
+                        <div class="review-item"><img src="assets/images/reviews/review10_girl.webp" alt=""><span class="review-label">Ritu Agarwal</span></div>
+                        <div class="review-item"><img src="assets/images/reviews/review11.webp" alt=""><span class="review-label">Sandeep Yadav</span></div>
+                        <div class="review-item"><img src="assets/images/reviews/review11_girl.webp" alt=""><span class="review-label">Pooja Mehta</span></div>
+                        <div class="review-item"><img src="assets/images/reviews/review12.webp" alt=""><span class="review-label">Manish Tiwari</span></div>
+                        <div class="review-item"><img src="assets/images/reviews/review12_girl.webp" alt=""><span class="review-label">Shweta Rao</span></div>
+                        <div class="review-item"><img src="assets/images/reviews/review13.webp" alt=""><span class="review-label">Gaurav Dixit</span></div>
+                        <div class="review-item"><img src="assets/images/reviews/review13_girl.webp" alt=""><span class="review-label">Ankita Bose</span></div>
+                        <div class="review-item"><img src="assets/images/reviews/review14.webp" alt=""><span class="review-label">Rohit Kapoor</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. PARTNER LOGOS (Scrolling Marquee) -->
+    <div class="clients-marquee-section">
+        <h4>Trusted by Clients and Learners Worldwide</h4>
+        <div class="marquee-container">
+            <div class="marquee-track">
+                <!-- Actual Client Logos -->
+                <img src="assets/images/clients/clients-1.webp" alt="Client Logo 1">
+                <img src="assets/images/clients/clients-2.webp" alt="Client Logo 2">
+                <img src="assets/images/clients/clients-3.webp" alt="Client Logo 3">
+                <img src="assets/images/clients/clients-4.webp" alt="Client Logo 4">
+                <img src="assets/images/clients/clients-5.webp" alt="Client Logo 5">
+                <img src="assets/images/clients/clients-6.webp" alt="Client Logo 6">
+                <!-- Duplicated for Marquee effect -->
+                <img src="assets/images/clients/clients-1.webp" alt="Client Logo 1">
+                <img src="assets/images/clients/clients-2.webp" alt="Client Logo 2">
+                <img src="assets/images/clients/clients-3.webp" alt="Client Logo 3">
+                <img src="assets/images/clients/clients-4.webp" alt="Client Logo 4">
+                <img src="assets/images/clients/clients-5.webp" alt="Client Logo 5">
+                <img src="assets/images/clients/clients-6.webp" alt="Client Logo 6">
+            </div>
+        </div>
+    </div>
+
+    <!-- 9. CONTACT SECTION -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+
+                <h2 class="section-title">Book Your Complimentary Demo</h2>
+                <p class="section-desc">Have a question or partnership idea? We'd love to hear from you.</p>
+            </div>
+            <div class="contact-wrapper">
+                <div class="contact-form-col">
+                    <div class="contact-glass">
+                        <form class="contact-form" onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+                            <div class="form-header-title" style="text-align: center; margin-bottom: 24px;">
+                                <h3 style="color: #fff; font-size: 1.5rem; font-weight: 600;">Book Your Complimentary Demo</h3>
+                            </div>
+                            <div class="form-row-2">
+                                <div class="input-wrap">
+                                    <label>First Name</label>
+                                    <input type="text" placeholder="First Name" required>
+                                </div>
+                                <div class="input-wrap">
+                                    <label>Last Name</label>
+                                    <input type="text" placeholder="Last Name" required>
+                                </div>
+                            </div>
+                            <div class="form-row-2">
+                                <div class="input-wrap">
+                                    <label>Business Email</label>
+                                    <input type="email" placeholder="Business Email" required>
+                                </div>
+                                <div class="input-wrap">
+                                    <label>Job Title</label>
+                                    <input type="text" placeholder="Job Title" required>
+                                </div>
+                            </div>
+                            <div class="form-row-2">
+                                <div class="input-wrap">
+                                    <label>Country</label>
+                                    <select required>
+                                        <option value="" disabled selected>Select Country</option>
+                                        <option>India</option>
+                                        <option>Singapore</option>
+                                        <option>Switzerland</option>
+                                        <option>Germany</option>
+                                        <option>United States</option>
+                                        <option>United Kingdom</option>
+                                        <option>Others</option>
+                                    </select>
+                                </div>
+                                <div class="input-wrap">
+                                    <label>Phone No with country Code</label>
+                                    <input type="tel" placeholder="Phone No with country Code" required>
+                                </div>
+                            </div>
+                            <div class="form-row-2">
+                                <div class="input-wrap">
+                                    <label>Company Website URL</label>
+                                    <input type="url" placeholder="https://example.com" required>
+                                </div>
+                                <div class="input-wrap">
+                                    <label>Organisation Type - Drop Down Menu</label>
+                                    <select required>
+                                        <option value="" disabled selected>Select Organisation Type</option>
+                                        <option>Student / Learner</option>
+                                        <option>College / University</option>
+                                        <option>Corporate Employer</option>
+                                        <option>Government</option>
+                                        <option>Other Inquiry</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-check-group" style="margin-top: 10px;">
+                                <label class="form-check">
+                                    <input type="checkbox" required>
+                                    <span class="check-text">I accept EduSkill's Privacy Policy and <a href="#" style="color: var(--color-sky-blue); text-decoration: none;">Terms of Service</a></span>
+                                </label>
+                                <label class="form-check">
+                                    <input type="checkbox">
+                                    <span class="check-text">Send me updates about EduSkill products, services and events.</span>
+                                </label>
+                                <label class="form-check">
+                                    <input type="checkbox">
+                                    <span class="check-text">I allow EduSkill to process my data for improving their services.</span>
+                                </label>
+                                <label class="form-check">
+                                    <input type="checkbox">
+                                    <span class="check-text">I understand that my information will be handled as detailed in the <a href="#" style="color: var(--color-sky-blue); text-decoration: none;">Privacy Policy</a>.</span>
+                                </label>
+                            </div>
+
+                            <div class="recaptcha-mock">
+                                <div style="display: flex; align-items: center; gap: 12px; background: #f8f9fa; padding: 12px 16px; border-radius: 4px; border: 1px solid #d1d5db; width: 260px;">
+                                    <input type="checkbox" style="width: 24px; height: 24px; margin: 0; padding: 0;">
+                                    <span style="color: #333; font-size: 0.9rem;">I'm not a robot</span>
+                                    <div style="margin-left: auto; text-align: center; display: flex; flex-direction: column; align-items: center;">
+                                        <img src="assets/images/logo/fevicon.webp" alt="reCAPTCHA" style="width: 24px; filter: grayscale(1);">
+                                        <span style="font-size: 0.5rem; color: #666; margin-top: 2px;">reCAPTCHA</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="display: flex; justify-content: center; margin-top: 10px;">
+                                <button type="submit" class="btn-submit">SUBMIT</button>
+                            </div>
+                            <div class="consent-notice" style="background: rgba(255,255,255,0.1); padding: 10px; border-radius: 6px; text-align: center; margin-top: 16px;">
+                                <span style="font-size: 0.75rem; color: #e2e8f0;">I can withdraw my consent any time by contacting EduSkill here: info@eduskill.org</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="contact-info-col">
+                    <div class="contact-info-card">
+                        <div class="contact-info-item">
+                            <h6>Phone Number</h6>
+                            <span>Singapore: +65 985 222 12</span>
+                            <span>Germany: +35 988 623 5533</span>
+                            <span>Switzerland: +41 (0) 52 630 28 45</span>
+                            <span>India: +91 7522802290, 9312189789</span>
+                        </div>
+                        <div class="contact-info-item">
+                            <h6>Email Address</h6>
+                            <span>info@eduskill.org</span>
+                            <span>info@eduskillx.com</span>
+                        </div>
+                        <div class="contact-info-item">
+                            <h6>Global Presence</h6>
+                            <span>India, Singapore, Switzerland, Germany</span>
+                        </div>
+                        <div class="contact-info-item" style="border-bottom: none; padding-bottom: 0;">
+                            <h5 style="color: var(--color-sky-blue); font-size: 1.1rem; margin-bottom: 8px;">Address</h5>
+                        </div>
+                        <div class="contact-info-item">
+                            <h6>Switzerland</h6>
+                            <span>Schaffhausenstrasse 550, 8052 Zürich</span>
+                        </div>
+                        <div class="contact-info-item">
+                            <h6>Germany</h6>
+                            <span>Campus Ring 1, 28759 Bremen</span>
+                        </div>
+                        <div class="contact-info-item">
+                            <h6>Singapore</h6>
+                            <span>10 Anson Road, #27-15, International Plaza, Singapore 079903</span>
+                        </div>
+                        <div class="contact-info-item">
+                            <h6>India</h6>
+                            <span>Noida, Mumbai, Prayagraj</span>
+                        </div>
+                        <div class="contact-info-item" style="border-bottom: none;">
+                            <h6>Street Address (HQ)</h6>
+                            <span>HQ - EduSkill Group, MIG 84, Ground Floor, Preetam Nagar Colony, Prayagraj, Uttar Pradesh, India - 211011</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subscribe Section -->
+    <section class="subscribe-section">
+        <div class="container">
+            <div class="subscribe-card">
+                <h4>Join 10,000+ subscribers</h4>
+                <p>Get tech updates, certification offers & job reports.</p>
+                <form onsubmit="event.preventDefault(); alert('Subscribed!');">
+                    <div class="sub-row">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Chatbot Widget -->
+    <div class="ai-chat-widget" id="aiChatWidget">
+        <div class="ai-chat-panel" id="aiChatPanel">
+            <div class="ai-chat-header">
+                <div class="ai-chat-avatar">
+                    <video src="assets/video/aichat/nexa_icon_main.webm" autoplay loop muted playsinline></video>
+                </div>
+                <div class="ai-chat-header-info">
+                    <strong>Nexa AI</strong>
+                    <span>Online</span>
+                </div>
+                <button class="ai-chat-close" id="aiChatClose">&times;</button>
+            </div>
+            <div class="ai-chat-messages" id="aiChatMessages">
+                <div class="ai-msg ai-msg-in">
+                    <div class="ai-msg-avatar">
+                        <video src="assets/video/aichat/nexa_icon_main.webm" autoplay loop muted playsinline></video>
+                    </div>
+                    <div class="ai-msg-bubble">Hi! I'm Nexa, your AI assistant. How can I help you today?</div>
+                </div>
+                <div class="ai-msg ai-msg-in">
+                    <div class="ai-msg-avatar">
+                        <video src="assets/video/aichat/nexa_icon_main.webm" autoplay loop muted playsinline></video>
+                    </div>
+                    <div class="ai-msg-bubble">Ask me about our platforms, courses, or anything else!</div>
+                </div>
+            </div>
+            <div class="ai-chat-input-row">
+                <input type="text" id="aiChatInput" placeholder="Type a message..." autocomplete="off">
+                <button id="aiChatSend">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                </button>
+            </div>
+        </div>
+        <button class="ai-chat-toggle" id="aiChatToggle">
+            <video src="assets/video/aichat/nexa_icon_main.webm" autoplay loop muted playsinline></video>
+            <span>Chat</span>
+        </button>
+    </div>
+
+    <!-- 11. LARGE FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top-grid">
+                <div class="footer-brand">
+                    <img src="assets/images/logo/footer_center.webp" alt="EduSkill Logo" class="footer-brand-logo" onerror="this.src='assets/images/logo/eduskill_logo_main.webp';">
+                    <p>EduSkill Group is a unified, AI-powered EdTech ecosystem connecting specialist platforms to empower students, institutions, and employers.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-icon-btn" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+                        </a>
+                        <a href="#" class="social-icon-btn" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </a>
+                        <a href="#" class="social-icon-btn" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646 1.014-.731 1.89-1.642 2.583-2.673z"/></svg>
+                        </a>
+                        <a href="#" class="social-icon-btn" aria-label="YouTube">
+                            <svg viewBox="0 0 24 24"><path d="M23.498 6.163c-.272-1.022-1.074-1.826-2.099-2.099-1.854-.5-9.4-.5-9.4-.5s-7.546 0-9.4.5c-1.026.273-1.828 1.077-2.1 2.099-.5 1.854-.5 5.728-.5 5.728s0 3.875.5 5.728c.272 1.022 1.074 1.826 2.1 2.099 1.854.5 9.4.5 9.4.5s7.547 0 9.4-.5c1.025-.273 1.827-1.077 2.099-2.099.5-1.853.5-5.728.5-5.728s0-3.875-.5-5.728zM9.5 15.5v-7l6.5 3.5-6.5 3.5z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="pages/about.html">About Group</a></li>
+                        <li><a href="pages/company/our-journey.html">Our Journey</a></li>
+                        <li><a href="pages/company/vision-mission-values.html">Vision, Mission & Values</a></li>
+                        <li><a href="pages/company/awards.html">Awards</a></li>
+                        <li><a href="pages/company/career.html">Careers</a></li>
+                        <li><a href="pages/contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="pages/services/services.html">All Services</a></li>
+                        <li><a href="pages/services/ai-products.html">AI Products</a></li>
+                        <li><a href="pages/services/platforms.html">Platforms</a></li>
+                        <li><a href="pages/services/institutional-solutions.html">Institutional Solutions</a></li>
+                        <li><a href="pages/services/international-partnerships.html">International Partnerships</a></li>
+                        <li><a href="pages/services/placement-employability.html">Placement & Employability</a></li>
+                        <li><a href="pages/services/research-innovation.html">Research & Innovation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="pages/resources/events.html">Events</a></li>
+                        <li><a href="pages/resources/media-news.html">Media & News</a></li>
+                        <li><a href="pages/resources/downloads.html">Downloads</a></li>
+                        <li><a href="pages/resources/faq.html">FAQ</a></li>
+                        <li><a href="pages/resources/entrepreneurship.html">Entrepreneurship</a></li>
+                        <li><a href="pages/resources/sitemap.html">Sitemap</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Policies</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="pages/policies/privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="pages/policies/terms-conditions.html">Terms & Conditions</a></li>
+                        <li><a href="pages/policies/cookie-policy.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom-bar">
+                <p>&copy; 2026 EduSkill Technology Group (EduSkill.org). All rights reserved.</p>
+                <div class="footer-logo-bottom">
+                    <img src="assets/images/logo/eduskill_logo_nav.webp" alt="EduSkill Logo Small" onerror="this.src='assets/images/logo/eduskill_logo_main.webp';">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<!-- Scripts -->
+    <script src="js/home.js"></script>
+    <!-- Three.js Silk Shader for Hero Background -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const heroSection = document.getElementById('hero-section');
+            if (!heroSection || typeof THREE === 'undefined') return;
+
+            const container = document.getElementById('hero-canvas-container');
+            if (!container) return;
+
+            const CONFIG = {
+                speed: 3,
+                scale: 1,
+                color: '#7CCEFA',
+                noiseIntensity: 1.2,
+                rotation: 0
+            };
+
+            const vertexShader = `
+                varying vec2 vUv;
+                varying vec3 vPosition;
+                void main() {
+                    vPosition = position;
+                    vUv = uv;
+                    gl_Position = vec4(position, 1.0);
+                }
+            `;
+
+            const fragmentShader = `
+                varying vec2 vUv;
+                varying vec3 vPosition;
+                uniform float uTime;
+                uniform vec3  uColor;
+                uniform float uSpeed;
+                uniform float uScale;
+                uniform float uRotation;
+                uniform float uNoiseIntensity;
+                uniform vec2  uResolution;
+                const float e = 2.71828182845904523536;
+                float noise(vec2 texCoord) {
+                    float G = e;
+                    vec2  r = (G * sin(G * texCoord));
+                    return fract(r.x * r.y * (1.0 + texCoord.x));
+                }
+                vec2 rotateUvs(vec2 uv, float angle) {
+                    float c = cos(angle);
+                    float s = sin(angle);
+                    mat2  rot = mat2(c, -s, s, c);
+                    return rot * uv;
+                }
+                void main() {
+                    float rnd        = noise(gl_FragCoord.xy);
+                    vec2  uv         = rotateUvs(vUv * uScale, uRotation);
+                    vec2  tex        = uv * uScale;
+                    float tOffset    = uSpeed * uTime;
+                    tex.y += 0.03 * sin(8.0 * tex.x - tOffset);
+                    float pattern = 0.6 +
+                                    0.4 * sin(5.0 * (tex.x + tex.y +
+                                                     cos(3.0 * tex.x + 5.0 * tex.y) +
+                                                      0.02 * tOffset) +
+                                             sin(20.0 * (tex.x + tex.y - 0.1 * tOffset)));
+                    vec4 col = vec4(uColor, 1.0) * vec4(pattern) - rnd / 15.0 * uNoiseIntensity;
+                    col.a = 1.0;
+                    gl_FragColor = col;
+                }
+            `;
+
+            function hexToNormalizedRGB(hex) {
+                hex = hex.replace('#', '');
+                return [
+                    parseInt(hex.slice(0, 2), 16) / 255,
+                    parseInt(hex.slice(2, 4), 16) / 255,
+                    parseInt(hex.slice(4, 6), 16) / 255
+                ];
+            }
+
+            const scene = new THREE.Scene();
+            const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
+            const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: "high-performance" });
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+            renderer.setSize(container.clientWidth, container.clientHeight);
+            container.appendChild(renderer.domElement);
+
+            const rgbColor = hexToNormalizedRGB(CONFIG.color);
+            const uniforms = {
+                uSpeed: { value: CONFIG.speed },
+                uScale: { value: CONFIG.scale },
+                uNoiseIntensity: { value: CONFIG.noiseIntensity },
+                uColor: { value: new THREE.Color(rgbColor[0], rgbColor[1], rgbColor[2]) },
+                uRotation: { value: CONFIG.rotation },
+                uTime: { value: 0 },
+                uResolution: { value: new THREE.Vector2(container.clientWidth, container.clientHeight) }
+            };
+
+            const geometry = new THREE.PlaneGeometry(2, 2);
+            const material = new THREE.ShaderMaterial({
+                vertexShader: vertexShader,
+                fragmentShader: fragmentShader,
+                uniforms: uniforms,
+                depthWrite: false,
+                depthTest: false
+            });
+
+            const mesh = new THREE.Mesh(geometry, material);
+            scene.add(mesh);
+
+            const clock = new THREE.Clock();
+            function animate() {
+                requestAnimationFrame(animate);
+                const delta = clock.getDelta();
+                uniforms.uTime.value += 0.08 * delta;
+                renderer.render(scene, camera);
+            }
+            animate();
+
+            window.addEventListener('resize', () => {
+                const width = container.clientWidth;
+                const height = container.clientHeight;
+                renderer.setSize(width, height);
+                uniforms.uResolution.value.set(width, height);
+            });
+        });
+    </script>
+    <script>
+        document.getElementById('ailab-toggle').addEventListener('click', function() {
+            var body = document.getElementById('ailab-body');
+            var chevron = document.getElementById('ailab-chevron');
+            if (body.style.display === 'none' || body.style.display === '') {
+                body.style.display = 'block';
+                chevron.textContent = '▲';
+            } else {
+                body.style.display = 'none';
+                chevron.textContent = '▼';
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var cp = window.location.pathname.split('/').pop();
+            document.querySelectorAll('.footer-links-list a').forEach(function(l) {
+                if (l.getAttribute('href') === cp) l.classList.add('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

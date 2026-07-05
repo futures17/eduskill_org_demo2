@@ -1,0 +1,193 @@
+/* entrepreneurship.css - Accelerator program grids and geometric vector graphics */
+
+/* ==========================================
+   1. Hero Header
+   ========================================== */
+.ent-hero {
+    background: linear-gradient(135deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.35) 100%), url("../../assets/images/hero-section/sustainability.webp") no-repeat center center/cover;
+    color: var(--color-white);
+    min-height: 60vh; padding: 180px 0 100px; display: flex; align-items: center; justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 4px solid var(--color-accent-main);
+}
+
+.ent-hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 80% 80%, rgba(123, 97, 255, 0.15) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.ent-hero h1 {
+    color: var(--color-white);
+    font-size: 3rem;
+    max-width: 800px;
+    margin: 0 auto var(--spacing-sm);
+    line-height: 1.25;
+}
+
+.ent-hero p {
+    color: var(--color-sky-blue);
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto;
+    font-weight: 300;
+}
+
+.ent-badge {
+    background-color: rgba(124, 206, 250, 0.15);
+    color: var(--color-sky-blue);
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: var(--spacing-md);
+    border: 1px solid rgba(124, 206, 250, 0.3);
+}
+
+/* ==========================================
+   2. Programs Grid
+   ========================================== */
+.ent-programs-section {
+    min-height: 60vh; padding: 180px 0 100px; display: flex; align-items: center; justify-content: center;
+}
+
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+}
+
+.prog-card {
+    background: var(--color-white);
+    border: 1px solid var(--color-light-blue);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-md);
+    box-shadow: var(--shadow-soft);
+    transition: all var(--transition-fast);
+}
+
+.prog-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--color-accent-main);
+}
+
+.prog-icon {
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-bg-light-violet);
+    color: var(--color-accent-main);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--spacing-sm);
+    transition: all var(--transition-fast);
+}
+
+.prog-card:hover .prog-icon {
+    background-color: var(--color-accent-main);
+    color: var(--color-white);
+}
+
+.prog-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.prog-card h4 {
+    font-size: 1.25rem;
+    margin-bottom: 6px;
+}
+
+.prog-card p {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+/* ==========================================
+   3. Geometric Shape Illustration (Pure CSS)
+   ========================================== */
+.illust-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+
+.geometric-shape-box {
+    width: 100%;
+    height: 320px;
+    border: 1px solid var(--color-light-blue);
+    border-radius: var(--radius-lg);
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-soft);
+    position: relative;
+    overflow: hidden;
+}
+
+.geo-circle {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 3px dashed var(--color-accent-main);
+    top: 50px;
+    left: 50px;
+    animation: rotate 12s linear infinite;
+}
+
+.geo-square {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border: 2px solid var(--color-sky-blue);
+    border-radius: var(--radius-sm);
+    top: 110px;
+    left: 170px;
+    transform: rotate(45deg);
+}
+
+.geo-line {
+    position: absolute;
+    width: 180px;
+    height: 4px;
+    background-color: var(--color-light-blue);
+    top: 220px;
+    left: 40px;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* ==========================================
+   4. Responsive Adaptations
+   ========================================== */
+@media (max-width: 991px) {
+    .programs-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+    }
+    .illust-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+}
+
+@media (max-width: 768px) {
+    .programs-grid {
+        grid-template-columns: 1fr;
+    }
+}

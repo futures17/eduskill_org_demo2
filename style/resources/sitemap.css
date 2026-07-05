@@ -1,0 +1,78 @@
+/* sitemap.css - Sitemap lists alignment and directory tree structures */
+
+/* ==========================================
+   1. Hero Header
+   ========================================== */
+.sm-hero {
+    background: linear-gradient(135deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.35) 100%), url("../../assets/images/hero-section/services.webp") no-repeat center center/cover;
+    color: var(--color-white);
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+    border-bottom: 4px solid var(--color-accent-main);
+}
+
+.sm-hero h1 {
+    color: var(--color-white);
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.sm-hero p {
+    color: var(--color-sky-blue);
+    margin: 0;
+}
+
+/* ==========================================
+   2. Directory Grid Tree Layout
+   ========================================== */
+.sm-directory-section {
+    min-height: 60vh; padding: 180px 0 100px; display: flex; align-items: center; justify-content: center;
+}
+
+.sitemap-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-lg);
+}
+
+.sitemap-col h4 {
+    font-size: 1.25rem;
+    color: var(--color-primary-blue);
+    border-bottom: 2px solid var(--color-light-blue);
+    padding-bottom: 6px;
+    margin-bottom: var(--spacing-sm);
+}
+
+.sitemap-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sitemap-col ul li a {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    transition: all var(--transition-fast);
+}
+
+.sitemap-col ul li a:hover {
+    color: var(--color-accent-main);
+    padding-left: 4px;
+}
+
+/* ==========================================
+   3. Responsive Adaptations
+   ========================================== */
+@media (max-width: 991px) {
+    .sitemap-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+    }
+}
+
+@media (max-width: 768px) {
+    .sitemap-grid {
+        grid-template-columns: 1fr;
+    }
+}

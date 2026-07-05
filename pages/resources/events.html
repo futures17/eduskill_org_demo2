@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events & Webinars - EduSkill Group</title>
+    <!-- Favicon -->
+    <link rel="icon" href="../../assets/images/logo/fevicon.webp" type="image/webp" sizes="any">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- CSS Modules -->
+    <link rel="stylesheet" href="../../style/style.css">
+    <link rel="stylesheet" href="../../style/navbar.css">
+    <link rel="stylesheet" href="../../style/resources/events.css">
+    <link rel="stylesheet" href="../../style/footer/footer.css">
+    <link rel="stylesheet" href="../../style/responsive.css">
+    <link rel="stylesheet" href="../../style/animations.css">
+</head>
+
+<body>
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="../../index.html" class="nav-logo">
+                <img src="../../assets/images/logo/eduskill_logo_nav.webp" alt="EduSkill Logo" onerror="this.src='../assets/images/logo/eduskill_logo_main.webp';">
+            </a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">☰</button>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="../../index.html" class="nav-link">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle">About Us <svg class="dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a>
+                    <div class="dropdown-panel">
+                        <div class="dropdown-grid">
+                            <a href="../about.html" class="dropdown-item">
+                                <div class="dropdown-info">
+                                    <span class="dropdown-title">About Group</span>
+                                    <span class="dropdown-desc">Our corporate overview</span>
+                                </div>
+                            </a>
+                            <a href="../company/vision-mission-values.html" class="dropdown-item">
+                                <div class="dropdown-info">
+                                    <span class="dropdown-title">Vision, Mission & Values</span>
+                                    <span class="dropdown-desc">Strategic direction & pillars</span>
+                                </div>
+                            </a>
+                            <a href="../company/our-journey.html" class="dropdown-item">
+                                <div class="dropdown-info">
+                                    <span class="dropdown-title">Our Journey</span>
+                                    <span class="dropdown-desc">Corporate timeline & history</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle">Platforms <svg class="dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a>
+                    <div class="dropdown-panel">
+                        <div class="dropdown-grid">
+                            <a href="../services/platforms.html#retailcareer" class="dropdown-item">
+                                <div class="dropdown-icon orange">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                                </div>
+                                <div class="dropdown-info">
+                                    <span class="dropdown-title">RetailCareer</span>
+                                    <span class="dropdown-desc">Retail jobs & certifications</span>
+                                </div>
+                            </a>
+                            <a href="../services/platforms.html#eduskillx" class="dropdown-item">
+                                <div class="dropdown-icon blue">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/></svg>
+                                </div>
+                                <div class="dropdown-info">
+                                    <span class="dropdown-title">EduSkillX</span>
+                                    <span class="dropdown-desc">AI testing, proctoring & LMS</span>
+                                </div>
+                            </a>
+                            <a href="../services/platforms.html#nearbyhiring" class="dropdown-item">
+                                <div class="dropdown-icon green">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 21.7C10 20 2 12.3 2 10a10 10 0 1 1 20 0c0 2.3-8 10-10 11.7z"/></svg>
+                                </div>
+                                <div class="dropdown-info">
+                                    <span class="dropdown-title">NearbyHiring</span>
+                                    <span class="dropdown-desc">Hyper-local job discovery</span>
+                                </div>
+                            </a>
+                            <a href="../services/platforms.html#evoxel" class="dropdown-item">
+                                <div class="dropdown-icon purple">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                                </div>
+                                <div class="dropdown-info">
+                                    <span class="dropdown-title">EvoXel</span>
+                                    <span class="dropdown-desc">Career counseling & mentoring</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                                <li class="nav-item dropdown">
+                    <a href="../services/services.html" class="nav-link dropdown-toggle">Services <svg class="dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a>
+                    <div class="dropdown-panel dropdown-large">
+                        <div class="dropdown-grid grid-2-col">
+                            <a href="../services/ai-proctoring.html" class="dropdown-item">
+                                <div class="dropdown-icon blue">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                </div>
+                                <div class="dropdown-info">
+                                    <span class="dropdown-title">AI Proctoring System</span>
+                                    <span class="dropdown-desc">Secure eye-tracking & voice anti-cheat</span>
+                                </div>
+                            </a>
+                            <a href="../services/virtual-labs.html" class="dropdown-item">
+                                <div class="dropdown-icon purple">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+                                </div>
+                                <div class="dropdown-info">
+                                    <span class="dropdown-title">Virtual Science Labs</span>
+                                    <span class="dropdown-desc">Cloud-based chemistry & coding labs</span>
+                                </div>
+                            </a>
+                            <a href="../services/ai-assessment.html" class="dropdown-item">
+                                <div class="dropdown-icon orange">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                                </div>
+                                <div class="dropdown-info">
+                                    <span class="dropdown-title">AI Resume Architect</span>
+                                    <span class="dropdown-desc">Create ATS-optimized job resumes</span>
+                                </div>
+                            </a>
+                            <a href="../services/career-counselling.html" class="dropdown-item">
+                                <div class="dropdown-icon green">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                                </div>
+                                <div class="dropdown-info">
+                                    <span class="dropdown-title">AI Interview Coach</span>
+                                    <span class="dropdown-desc">Behavioral and technical mock feedback</span>
+                                </div>
+                            </a>
+                            <a href="../services/placement-services.html" class="dropdown-item">
+                                <div class="dropdown-icon blue">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/></svg>
+                                </div>
+                                <div class="dropdown-info">
+                                    <span class="dropdown-title">Placement CRM Hub</span>
+                                    <span class="dropdown-desc">College drive analytics & offer tracker</span>
+                                </div>
+                            </a>
+                            <a href="../services/platforms.html" class="dropdown-item">
+                                <div class="dropdown-icon orange">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                                </div>
+                                <div class="dropdown-info">
+                                    <span class="dropdown-title">Recruiter Portal</span>
+                                    <span class="dropdown-desc">Filter vetted student portfolios</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="../contact.html" class="nav-link">Contact Us</a></li>
+            </ul>
+            <div class="nav-cta">
+                <a href="../contact.html" class="btn btn-primary">Connect With Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="evt-hero">
+        <div class="container">
+            <div class="hero-caption">
+                <span class="evt-badge">WHAT'S HAPPENING</span>
+                <h1>Events & Conferences</h1>
+                <p>Participate in our upcoming job fairs, tech hackathons, and webinars to upgrade your career readiness indices.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- FILTER & LISTINGS -->
+    <section class="evt-main-section">
+        <div class="container">
+            <div class="evt-filters" style="display: flex; justify-content: center; gap: var(--spacing-sm); margin-bottom: var(--spacing-xl); flex-wrap: wrap;">
+                <button class="evt-filter-btn active" data-filter="all">All Events</button>
+                <button class="evt-filter-btn" data-filter="fair">Job Fairs</button>
+                <button class="evt-filter-btn" data-filter="hackathon">Hackathons</button>
+                <button class="evt-filter-btn" data-filter="webinar">Webinars</button>
+            </div>
+
+            <!-- Event Grid -->
+            <div class="evt-grid" id="evt-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-lg);">
+                <!-- Event 1 -->
+                <div class="evt-card" data-category="hackathon" style="border: 1px solid var(--color-light-blue); border-radius: var(--radius-lg); overflow: hidden; background: var(--color-white); box-shadow: var(--shadow-soft);">
+                    <div style="background-color: var(--color-accent-main); color: var(--color-white); padding: 12px; font-weight: bold; font-size: 0.85rem; letter-spacing: 1px;">UPCOMING | HACKATHON</div>
+                    <div style="padding: var(--spacing-md);">
+                        <span class="evt-date" style="color: var(--color-accent-main); font-weight: bold; font-size: 0.9rem; display: block; margin-bottom: 4px;">August 15, 2026</span>
+                        <h4>National AI Innovation Challenge</h4>
+                        <p style="font-size: 0.9rem; color: var(--color-text-muted);">A 36-hour remote coding sandbox run to build scalable educational tools.</p>
+                        <a href="../thank-you.html" class="btn btn-secondary" style="width: 100%; display: block; text-align: center; margin-top: 15px;">Register Now</a>
+                    </div>
+                </div>
+
+                <!-- Event 2 -->
+                <div class="evt-card" data-category="fair" style="border: 1px solid var(--color-light-blue); border-radius: var(--radius-lg); overflow: hidden; background: var(--color-white); box-shadow: var(--shadow-soft);">
+                    <div style="background-color: var(--color-warning-orange); color: var(--color-white); padding: 12px; font-weight: bold; font-size: 0.85rem; letter-spacing: 1px;">UPCOMING | JOB FAIR</div>
+                    <div style="padding: var(--spacing-md);">
+                        <span class="evt-date" style="color: var(--color-accent-main); font-weight: bold; font-size: 0.9rem; display: block; margin-bottom: 4px;">September 05, 2026</span>
+                        <h4>Prayagraj Mega Career Drive</h4>
+                        <p style="font-size: 0.9rem; color: var(--color-text-muted);">Mapping 50+ retail operations and corporate recruiters directly with local talent pools.</p>
+                        <a href="../thank-you.html" class="btn btn-secondary" style="width: 100%; display: block; text-align: center; margin-top: 15px;">Register Now</a>
+                    </div>
+                </div>
+
+                <!-- Event 3 -->
+                <div class="evt-card" data-category="webinar" style="border: 1px solid var(--color-light-blue); border-radius: var(--radius-lg); overflow: hidden; background: var(--color-white); box-shadow: var(--shadow-soft);">
+                    <div style="background-color: var(--color-success-green); color: var(--color-white); padding: 12px; font-weight: bold; font-size: 0.85rem; letter-spacing: 1px;">UPCOMING | WEBINAR</div>
+                    <div style="padding: var(--spacing-md);">
+                        <span class="evt-date" style="color: var(--color-accent-main); font-weight: bold; font-size: 0.9rem; display: block; margin-bottom: 4px;">July 20, 2026</span>
+                        <h4>Mastering European ECTS Transfers</h4>
+                        <p style="font-size: 0.9rem; color: var(--color-text-muted);">Deans and advisory specialists explain international study pathways and visa applications.</p>
+                        <a href="../thank-you.html" class="btn btn-secondary" style="width: 100%; display: block; text-align: center; margin-top: 15px;">Register Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAST EVENTS GALLERY -->
+    <section class="evt-gallery-section" style="background-color: var(--color-bg-very-light-grey);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Past Drives & Seminars</h2>
+                <p>A visual gallery highlighting completed recruitment drives and certification seminars.</p>
+            </div>
+            
+            <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--spacing-md);">
+                <div style="background: var(--color-white); padding: 15px; border-radius: var(--radius-md); box-shadow: var(--shadow-soft); text-align: center;">
+                    <div style="background-color: var(--color-light-blue); height: 160px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: var(--color-primary-blue); margin-bottom: 10px;">[ Noida job fair - 2025 ]</div>
+                    <h5>Noida Job Fair Drive</h5>
+                    <p style="font-size: 0.85rem; margin-bottom: 0;">Hosted 1200+ interview rounds on single days.</p>
+                </div>
+                <div style="background: var(--color-white); padding: 15px; border-radius: var(--radius-md); box-shadow: var(--shadow-soft); text-align: center;">
+                    <div style="background-color: var(--color-light-blue); height: 160px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: var(--color-primary-blue); margin-bottom: 10px;">[ Swiss credits seminar ]</div>
+                    <h5>Credit Alignment Panel</h5>
+                    <p style="font-size: 0.85rem; margin-bottom: 0;">Restructuring credit transfers with ECTS specialists.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- LARGE FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top-grid">
+                <div class="footer-brand">
+                    <img src="../../assets/images/logo/footer_center.webp" alt="EduSkill Logo" class="footer-brand-logo" onerror="this.src='../assets/images/logo/eduskill_logo_main.webp';">
+                    <p>EduSkill Group is a unified, AI-powered EdTech ecosystem connecting specialist platforms to empower students, institutions, and employers.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-icon-btn" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+                        </a>
+                        <a href="#" class="social-icon-btn" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </a>
+                        <a href="#" class="social-icon-btn" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646 1.014-.731 1.89-1.642 2.583-2.673z"/></svg>
+                        </a>
+                        <a href="#" class="social-icon-btn" aria-label="YouTube">
+                            <svg viewBox="0 0 24 24"><path d="M23.498 6.163c-.272-1.022-1.074-1.826-2.099-2.099-1.854-.5-9.4-.5-9.4-.5s-7.546 0-9.4.5c-1.026.273-1.828 1.077-2.1 2.099-.5 1.854-.5 5.728-.5 5.728s0 3.875.5 5.728c.272 1.022 1.074 1.826 2.1 2.099 1.854.5 9.4.5 9.4.5s7.547 0 9.4-.5c1.025-.273 1.827-1.077 2.099-2.099.5-1.853.5-5.728.5-5.728s0-3.875-.5-5.728zM9.5 15.5v-7l6.5 3.5-6.5 3.5z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="../about.html">About Group</a></li>
+                        <li><a href="../company/our-journey.html">Our Journey</a></li>
+                        <li><a href="../company/vision-mission-values.html">Vision, Mission & Values</a></li>
+                        <li><a href="../company/awards.html">Awards</a></li>
+                        <li><a href="../company/career.html">Careers</a></li>
+                        <li><a href="../contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="../services/services.html">All Services</a></li>
+                        <li><a href="../services/ai-products.html">AI Products</a></li>
+                        <li><a href="../services/platforms.html">Platforms</a></li>
+                        <li><a href="../services/institutional-solutions.html">Institutional Solutions</a></li>
+                        <li><a href="../services/international-partnerships.html">International Partnerships</a></li>
+                        <li><a href="../services/placement-employability.html">Placement & Employability</a></li>
+                        <li><a href="../services/research-innovation.html">Research & Innovation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="media-news.html">Media & News</a></li>
+                        <li><a href="downloads.html">Downloads</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="entrepreneurship.html">Entrepreneurship</a></li>
+                        <li><a href="sitemap.html">Sitemap</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Policies</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="../policies/privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="../policies/terms-conditions.html">Terms & Conditions</a></li>
+                        <li><a href="../policies/cookie-policy.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom-bar">
+                <p>&copy; 2026 EduSkill Technology Group (EduSkill.org). All rights reserved.</p>
+                <div class="footer-logo-bottom">
+                    <img src="../../assets/images/logo/eduskill_logo_nav.webp" alt="EduSkill Logo Small" onerror="this.src='../assets/images/logo/eduskill_logo_main.webp';">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../../js/home.js"></script>
+    <script src="../../js/resources/events.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var cp = window.location.pathname.split('/').pop();
+            document.querySelectorAll('.footer-links-list a').forEach(function(l) {
+                if (l.getAttribute('href') === cp) l.classList.add('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

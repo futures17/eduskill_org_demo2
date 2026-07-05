@@ -1,0 +1,304 @@
+/* style.css - Global Styles and variables */
+
+/* ==========================================
+   1. Custom Properties (Variables)
+   ========================================== */
+:root {
+    /* Brand Colors - Client Approved Design System */
+    --color-deep-blue: #142665;         /* Primary Deep Corporate Blue - lightened for better visibility */
+    --color-corporate-navy: #1A2F73;    /* Corporate Navy - lightened */
+    --color-professional-purple: #5B3B8C; /* Professional Purple Accent */
+    --color-sky-blue: #7CCEFA;          /* Sky Blue Highlight */
+    --color-soft-blue: #E8F0FE;         /* Soft Blue Background */
+    --color-white: #FFFFFF;             /* White */
+    --color-light-gray: #F5F7FA;        /* Light Gray Background */
+    --color-dark-navy: #080C2A;         /* Darkest Navy for deep sections */
+    
+    /* Legacy variable aliases for backward compatibility */
+    --color-primary-blue: var(--color-deep-blue);
+    --color-secondary-blue: var(--color-sky-blue);
+    --color-accent-main: var(--color-professional-purple);
+    --color-accent-hover: #4A2E75;
+    --color-bg-light-violet: var(--color-light-gray);
+    --color-bg-very-light-grey: var(--color-light-gray);
+    --color-light-blue: #D1D9E6;
+    
+    /* Support Colors */
+    --color-success-green: #2EB67D;
+    --color-warning-orange: #F59E0B;
+    
+    /* Text Colors */
+    --color-dark-text: #111827;
+    --color-text-muted: #6B7280;
+    --dark-blue: var(--color-deep-blue);
+    
+    /* Typography */
+    --font-family-main: 'Poppins', 'Inter', sans-serif;
+    
+    /* Spacing */
+    --spacing-xs: 8px;
+    --spacing-sm: 16px;
+    --spacing-md: 24px;
+    --spacing-lg: 40px;
+    --spacing-xl: 60px;
+    --spacing-xxl: 80px;
+    
+    /* Border Radius & Shadows - Client: 12px cards */
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 12px;
+    --shadow-soft: 0 8px 30px rgba(13, 27, 74, 0.06);
+    --shadow-hover: 0 16px 40px rgba(13, 27, 74, 0.12);
+    --shadow-premium: 0 20px 60px rgba(13, 27, 74, 0.15);
+    
+    /* Transitions */
+    --transition-fast: 0.3s ease;
+}
+
+/* ==========================================
+   2. Reset / Normalize
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px; /* 1rem = 16px */
+}
+
+body {
+    font-family: var(--font-family-main);
+    color: var(--color-dark-text);
+    background-color: var(--color-white);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color var(--transition-fast);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ==========================================
+   3. Typography (Visual Hierarchy Upgrades)
+   ========================================== */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-primary-blue);
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: var(--spacing-sm);
+}
+
+p {
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text-muted);
+}
+
+/* ==========================================
+   4. Layout / Grid (Containers)
+   ========================================== */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+section {
+    padding: var(--spacing-xxl) 0;
+}
+
+/* ==========================================
+   5. Buttons System - Client Approved
+   ========================================== */
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    border-radius: var(--radius-lg);
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+    letter-spacing: 0.3px;
+}
+
+.btn-primary {
+    background-color: var(--color-deep-blue);
+    color: var(--color-white);
+    box-shadow: 0 4px 15px rgba(13, 27, 74, 0.2);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-professional-purple);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(91, 59, 140, 0.3);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-deep-blue);
+    border: 2px solid var(--color-deep-blue);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-deep-blue);
+    color: var(--color-white);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(13, 27, 74, 0.2);
+}
+
+.btn-glass {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: var(--color-white);
+}
+
+.btn-glass:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-3px);
+}
+
+.btn-outline-light {
+    background: transparent;
+    color: var(--color-white);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.btn-outline-light:hover {
+    background: var(--color-white);
+    color: var(--color-deep-blue);
+    border-color: var(--color-white);
+    transform: translateY(-3px);
+}
+
+/* ==========================================
+   6. Spacing & Header Utilities
+   ========================================== */
+.text-center { text-align: center; }
+.mb-1 { margin-bottom: var(--spacing-xs); }
+.mb-2 { margin-bottom: var(--spacing-sm); }
+.mb-3 { margin-bottom: var(--spacing-md); }
+.mb-4 { margin-bottom: var(--spacing-lg); }
+.mb-5 { margin-bottom: var(--spacing-xl); }
+
+.section-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto var(--spacing-xl);
+}
+
+.section-header h2 {
+    font-size: 2.5rem; /* Upgraded for strong visual hierarchy */
+    margin-bottom: var(--spacing-sm);
+    position: relative;
+    display: inline-block;
+    padding-bottom: var(--spacing-xs);
+}
+
+.section-header h2::before {
+    content: '';
+    position: absolute;
+    bottom: 1.5px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--color-sky-blue);
+    opacity: 0.4;
+    border-radius: 1px;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-sky-blue), var(--color-professional-purple));
+    border-radius: 2px;
+    z-index: 1;
+}
+
+.section-header p {
+    font-size: 1.15rem;
+    color: var(--color-text-muted);
+}
+
+/* ==========================================
+   7. Shared Hero Caption (all pages)
+   ========================================== */
+.hero-caption {
+    position: relative;
+    z-index: 2;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 35px 40px;
+    background: rgba(41, 41, 43, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 16px;
+    backdrop-filter: blur(4px);
+}
+
+.hero-caption h1 {
+    color: var(--color-white) !important;
+    font-size: 3rem !important;
+    font-weight: 800 !important;
+    max-width: 800px;
+    margin: 0 auto var(--spacing-sm) !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.5px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.25);
+}
+
+.hero-caption p {
+    color: var(--color-sky-blue) !important;
+    font-size: 1.15rem !important;
+    max-width: 700px;
+    margin: 0 auto !important;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+/* Bottom subtle inset shadow on all page headers */
+.service-detail-hero,
+.services-hero,
+.platforms-hero,
+.about-hero,
+.contact-hero,
+.place-hero,
+.res-hero,
+.map-hero,
+.inst-hero,
+.prod-hero,
+.vmv-hero,
+.journey-hero,
+.career-hero,
+.awards-hero,
+.evt-hero,
+.news-hero,
+.dl-hero,
+.faq-hero,
+.ent-hero,
+.sm-hero,
+.policy-hero {
+    box-shadow: inset 0 -80px 60px -40px rgba(20, 38, 101, 0.08);
+}

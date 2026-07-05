@@ -1,0 +1,33 @@
+.git/
+.git/**
+.gitignore
+.wranglerignore
+node_modules/
+node_modules/**
+documentation/
+documentation/**
+ai workbench/
+ai workbench/**
+eduskillx/
+eduskillx/**
+antigravity-awesome-skills*
+antigravity-awesome-skills*/**
+AGENTS.md
+README.md
+build-deployment-zip.bat
+git-pull.bat
+git-push.bat
+requirements.txt
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+*.log
+*.md
+*.pdf
+*.doc
+*.docx
+__pycache__/
+__pycache__/**
+*.pyc
